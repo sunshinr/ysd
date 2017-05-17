@@ -1,0 +1,198 @@
+body {
+  background: #f5f5f5;
+}
+body .shopcart {
+  margin-bottom: 5rem;
+}
+body .shopcart .title {
+  font-size: 1.7rem;
+  text-align: center;
+  width: 100%;
+  padding: 1.3rem 0;
+  background: #FFFFFF;
+}
+body .shopcart .banner {
+  background: #FFFFFF;
+  padding: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #9e9e9e;
+}
+body .shopcart .banner i {
+  width: 1.3rem;
+  height: 1.2rem;
+  display: inline-block;
+  background: url("../images/shopcart-icon.png") 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  vertical-align: initial;
+  margin-right: 0.3rem;
+}
+body .shopcart .shopcart-box {
+  overflow: hidden;
+}
+body .shopcart .shopcart-box li {
+  background: #FFFFFF;
+  margin: 0.4rem 0;
+  padding: 1rem;
+  overflow: hidden;
+}
+body .shopcart .shopcart-box li img {
+  border: solid 1px #dadada;
+  width: 25%;
+  float: left;
+}
+body .shopcart .shopcart-box li .shop-text {
+  width: 65%;
+  float: right;
+  position: relative;
+}
+body .shopcart .shopcart-box li .shop-text h4 {
+  font-size: 1.5rem;
+  margin: 0.6rem 0;
+}
+body .shopcart .shopcart-box li .shop-text p {
+  font-size: 1.2rem;
+  color: #d83d11;
+  margin: 0.6rem 0;
+}
+body .shopcart .shopcart-box li .shop-text p span {
+  font-size: 1.2rem;
+  color: #d83d11;
+}
+body .shopcart .shopcart-box li .shop-text .num {
+  margin-top: 0.7rem;
+}
+body .shopcart .shopcart-box li .shop-text .num .btn-list {
+  display: inline-block;
+}
+body .shopcart .shopcart-box li .shop-text .num .btn-list i {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: bottom;
+}
+body .shopcart .shopcart-box li .shop-text .num .btn-list i:last-child {
+  background: url(../images/order-btn_05.jpg);
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+body .shopcart .shopcart-box li .shop-text .num .btn-list i:first-child {
+  background: url(../images/order-btn_03.jpg);
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+body .shopcart .shopcart-box li .shop-text .num .btn-list span {
+  display: inline-block;
+  font-size: 1.2rem;
+  width: 2rem;
+  text-align: center;
+}
+body .shopcart .shopcart-box li .shop-text .num .inventory {
+  display: inline-block;
+  font-size: 1rem;
+  color: #bdbdbd;
+  margin-left: 0.4rem;
+}
+body .shopcart .shopcart-box li .shop-text .delete {
+  width: 1.8rem;
+  height: 1.9rem;
+  background: url("../images/shop-cart_05.png") 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+}
+body .shopcart .shopcart-box li .little-total {
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: #919191;
+  clear: both;
+}
+body .shopcart .shopcart-box li .little-total span {
+  font-size: 1.2rem;
+  color: #000000;
+}
+body .shopcart-bottom {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+}
+body .shopcart-bottom .money {
+  color: #e34500;
+  font-size: 1.5rem;
+  width: 65%;
+  display: inline-block;
+  float: left;
+  line-height: 5rem;
+  padding-left: 1rem;
+}
+body .shopcart-bottom .money a {
+  color: #e34500;
+  font-size: 1.5rem;
+}
+body .shopcart-bottom .pay {
+  position: relative;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  background: #03a9f4;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  width: 35%;
+  text-align: center;
+  line-height: 5rem;
+  height: 5rem;
+}
+
+input[type="checkbox"]{
+	float: left;
+}
+
+
+.main_con_allchoose{
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	border-bottom:1px solid #e7e7e6 ;
+}
+.main_con_allchoose img{
+	width: 2.4rem;
+	height: 2.4rem;
+	float: right;
+	margin: .8rem 1.5rem;
+	display: none;
+}
+.circle{
+	width: 1.4rem;
+	height: 1.4rem;
+	border: 1px solid #bab9b9;
+	border-radius: 50%;
+	display: block;
+	float: left;
+	margin: 1.2rem;
+}
+.main_con_goods{
+	overflow: hidden;
+}
+.main_con_goods ul{
+	overflow: hidden;
+}
+.main_con_goods ul li{
+	overflow: hidden;
+	margin: 15px 0px;
+}
+.main_con_goods ul li .circle{
+	float: left;
+	margin: 3rem .6rem;
+}
+.main_con_goods ul li img{
+    border: solid 1px #dadada;
+    width: 25%;
+    float: left;
+}

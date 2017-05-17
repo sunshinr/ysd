@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>病历管理</title>
+		<link rel="stylesheet" href="/css/reset.css" media="screen">
+		<link rel="stylesheet" href="/css/common.css" media="screen">
+		<link rel="stylesheet" href="/css/case-manage.css" media="screen">
+		<link rel="stylesheet" href="/css/mui.min.css" media="screen">
+	</head>
+	<body>
+		<header>
+			<i class="go_1"><img src="/images/left-ico.png"/></i>
+			<h1>病历管理</h1>
+		</header>
+		<div class="case-container">
+			<div class="case-box">
+				<div class="box-content">
+					<h4><i id="ico"></i>今天</h4>
+					
+					<div class="case-content">
+						<div class="case-detail mui-content">
+							<div class="img-box mui-content-padded">
+								<div class="disease-img"><img src="/images/dis.png" data-preview-src="" data-preview-group="1" /></div>
+								<div class="disease-img"><img src="/images/dis2.png" data-preview-src="" data-preview-group="1" /></div>
+							</div>
+							<p>您可以上传病历、化验单等。方便您和医生团队进行病情的管理。</p>
+							<span class="spot"></span>
+						</div>
+					</div>
+
+				</div>
+				<div class="box-content">
+					<h4><i id="ico"></i>昨天</h4>
+					<div class="case-content">
+						<div class="case-detail  mui-content">
+							<div class="img-box mui-content-padded">
+								<div class="disease-img"><img src="/images/dis3.png" data-preview-src="" data-preview-group="1" /></div>
+							</div>
+							<p>阶梯式系统化教学内容，让知识点融会贯通。学习内容转而精，直击健康管理师技能体系。</p>
+							<span class="spot"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="case-edit">
+			<ul>
+				<li id="editor">编辑</li>
+				<li id="delete">删除</li>
+			</ul>
+		</div>
+		<div class="hideshow"></div>
+		<script src="/js/zepto.min.js"></script>
+		<script src="/js/zepto.sqq.js"></script>
+		<script src="/js/mui.min.js"></script>
+		<script src="/js/mui.zoom.js"></script>
+		<script src="/js/mui.previewimage.js"></script>
+		<script>
+			$(function() {
+				var left = $('#ico').width() / 2;
+				$('.case-content').css('margin-left', left);
+
+				$('.spot').each(function(i, v) {
+					$(v).click(function() {
+						$('.hideshow').addClass('movein');
+						$('.case-edit').addClass('moveup');
+					});
+					$('.hideshow').click(function() {
+						$('.hideshow').removeClass('movein');
+						$('.case-edit').removeClass('moveup');
+					});
+				});
+				$("#editor").click(function(){
+					window.location.href="case-details.html"
+				});
+				$(".go_1").click(function(){
+					window.location.href="javascript:history.go(-1)"
+				});				
+			});
+		</script>
+		<script>
+			mui.previewImage();
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,118 @@
+body{
+	background: #f0f0f0;
+}
+.comment-list{
+	background: #ffffff;
+	margin-bottom:4rem;
+}
+.comment-list .top{
+	padding: 3rem 1.2rem 1rem 1.2rem;position: relative;
+    z-index: 10;
+    box-shadow: 1px 2px 4px #e0dfdf;
+}
+.comment-list .top a{
+	display: inline-block;width: 2.25rem;height: 1.7rem;float: left;margin-top: 0.3rem;
+}
+.comment-list .top a img{
+	width: 100%;
+}
+.comment-list .top h1{
+	font-size: 1.7rem;width: 100%;text-align: center;
+}
+
+.comment-list .list{
+	overflow: hidden;
+}
+.comment-list .list li{
+	padding:1.7rem 1rem;
+	border:solid 1px #e4e4e4;
+	overflow: hidden;
+}
+.comment-list .list li .tx{
+	display: inline-block;
+	width:10%;
+}
+.comment-list .list li .tx img{
+	width:100%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+}
+.comment-list .list li .li-box{
+	float: right;width: 86%;
+}
+li .li-box h4{
+	font-size:1.3rem;
+	width:100%;
+	margin-top:0.8rem;
+}
+li .li-box h4 span{
+	font-size:1.1rem;
+	color: #7f7f7f;
+	float: right;
+}
+li .li-box p{
+	font-size:1.2rem;
+	margin: 1.7rem 0 1.2rem 0;
+}
+li .li-box .full-right{
+	float: right;
+}
+li .li-box .full-right span{
+	display: inline-block;
+	font-size:1.1rem;
+	color: #7f7f7f;
+	margin-right:1.5rem;
+}
+li .li-box .full-right span i{
+	display: inline-block;
+	margin-right:0.6rem;
+	vertical-align: bottom;
+}
+li .li-box .full-right span:first-of-type i{
+	width:1.6rem;
+	height:1.5rem;
+	background: url("../images/pl_03.png");
+	-webkit-background-size:100%;
+	background-size:100%;
+}
+li .li-box .full-right span:last-of-type i{
+	width:1.5rem;
+	height:1.2rem;
+	background: url("../images/pl_06.png");
+	-webkit-background-size:100%;
+	background-size:100%;
+}
+
+.send-bottom{
+	width:100%;
+	background: #ffffff;
+	position: fixed;
+	left:0;
+	bottom:0;
+	height:4rem;
+	padding:1rem;
+	z-index:10;
+
+}
+.send-bottom i{
+	display: inline-block;
+	width:2rem;
+	height:2rem;
+	background:url("../images/smile.png");
+	-webkit-background-size:100%;
+	background-size:100%;
+	float: left;
+}
+.send-bottom input{
+	margin-left: 1.2rem;
+	border-bottom: solid 1px #e4e4e4;
+	width:74%;
+	font-size: 1.1rem;
+	padding-bottom: 0.6rem;
+}
+.send-bottom span{
+	display: inline-block;
+	font-size:1.3rem;
+	float: right;
+}

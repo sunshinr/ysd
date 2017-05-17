@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>方案进度</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/Programme.css" >
+    <script type="text/javascript" src="/js/jquery.min.js" ></script>
+    <script type="text/javascript" src="/js/zepto.min.js" ></script>
+    <script type="text/javascript" src="/js/zepto.sqq.js" ></script>
+</head>
+<body>
+
+<!--占位头部（可删）-->
+		<header>
+			<a href="javascript:history.go(-1)"><i><img src="/images/left-ico.png"/></i></a>
+			<h1>方案进度</h1>
+		</header>
+<!--方案容器-->
+<div class="Programme_con">
+    <div class="list">
+        <h2><img src="/images/ProgrammeIcon_03.png" alt="">慢跑计划 <span>积分：15</span> </h2>
+        <p>坚持每天慢跑30分钟，增进健康、增强体质、减肥防胖并求体态优美和心情舒畅。慢跑每分钟消耗10~13大卡的热量。</p>
+    </div>
+
+    <div class="list">
+        <h2><img src="/images/ProgrammeIcon_06.png" alt="">方案进度 </h2>
+        <div class="Percentage">
+              <div class="Percentage_num">60</div>
+        </div>
+    </div>
+
+    <div class="list">
+        <h2><img src="/images/ProgrammeIcon_09.png" alt="">执行周期 </h2>
+        <p>35天为一个周期</p>
+    </div>
+</div>
+<script>
+    $(function(){
+        var m = 0;
+        var $el = $('.Percentage_num');
+        var $per = $('.Percentage');
+        var PercentageNum = $el.text();
+        $el.css('width',0);
+
+        var timer = setInterval(function ss(){
+             if(m > PercentageNum){
+                 clearInterval(timer);
+             } else {
+                 $el.css('width',PercentageNum+'%');
+                 $el.text(m++ +'%' );
+                 var runText = $el.text();
+                 if(parseInt(runText)<20){
+                     $per.addClass('red')
+                 } else if(parseInt(runText)<60 ){
+                     $per.addClass('yellow').removeClass('red')
+                 } else {
+                     $per.addClass('green').removeClass('yellow')
+                 }
+             }
+        },20);
+    })
+</script>
+
+
+
+<div class="start_btn">
+    <button class="Go_finish">去完成</button>
+    <button>今日已完成</button>
+</div>
+
+<script>
+    $(function(){
+        $(".Go_finish").click(function(){
+            $(this).hide();
+            $('.start_btn').prepend('<span class="run_time">正在进行中...</span>');
+        })
+    })
+</script>
+
+
+
+
+</body>
+</html>

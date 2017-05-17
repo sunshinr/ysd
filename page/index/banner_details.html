@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>病例管理</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/banner_details.css" >
+    <script type="text/javascript" src="/js/jquery.min.js" ></script>
+    <script type="text/javascript" src="/js/zepto.min.js" ></script>
+    <script type="text/javascript" src="/js/zepto.sqq.js" ></script>
+</head>
+<body>
+
+<!--占位头部（可删）-->
+		<header>
+			<a href="javascript:history.go(-1)"><i><img src="/images/left-ico.png"/></i></a>
+			<h1>春季防过敏有绝招</h1>
+		</header>
+
+<!--详情容器-->
+<div class="detailds_con">
+       <h1>春季防过敏有绝招</h1>
+       <span class="timer">2017.3.31</span>
+       <span class="from">来源：新鲜的果果</span>
+
+       <div class="detailds_text">
+           <p>春天百花齐开，正是踏春赏花的好时节，却也是过敏的高发季，如何有效防过敏显的尤为重要。</p>
+           <img src="/images/banner_details_03.png" alt="">
+           <h3>吃胡萝卜</h3>
+           <p>胡萝卜中的β-胡萝卜素能有效预防花粉过敏症、过敏性皮炎等过敏反应，所以说，如果你是过敏性体质的话，不妨在生活中多吃一些胡萝卜来抗击身体过敏，只有这样才能够最大限度的帮你预防出现花粉过敏从而导致身体不适的情况发生。</p>
+
+       </div>
+</div>
+
+
+<!--底部按钮-->
+<div class="bottom_btn">
+     <ul>
+         <li class="thumbs-up"><img src="/images/banner_details_14.png" alt=""><p>点赞</p></li>
+         <li class="share"><img src="/images/banner_details_07.png" alt=""><p>分享</p></li>
+         <li><a href="comment-list.html"><img src="/images/banner_details_09.png" alt=""><p>评论</p></a></li>
+     </ul>
+</div>
+
+
+<div id="mask"></div>
+
+
+<script>
+//显示遮罩
+    function alertBox(){
+        $("#mask").fadeIn(200);
+    }
+//隐藏遮罩
+    function clearBox(){
+        $("#mask").fadeOut(100);
+    }
+
+//  关闭分享
+    function sClose(){
+       var $shareCon = $(".share_con");
+        $shareCon.animate({
+            bottom: '-'+$shareCon.height()+'px'
+        },200,function(){
+            $(".share_con").remove();
+            clearBox();
+        });
+    }
+
+// 点赞
+    $(".thumbs-up").on('click',function(){
+        if($(this).hasClass("active")){
+            $(this).removeClass("active").find('p').text('点赞');
+            $(this).find('img').attr("src","/images/banner_details_14.png");
+        } else {
+            $(this).addClass("active").find('p').text('已点赞');
+            $(this).find('img').attr("src","/images/banner_details_12.png");
+        }
+    });
+
+    $(function(){
+        //分享dom
+        var shareCon = "<div class='share_con'><h3>分享至</h3>"
+            +"<ul>"
+            +"<li><a href='##'><img src='/images/Community_img_03.png' alt=''><p>社区</p></a></li>"
+            +"<li><a href='##'><img src='/images/Community_img_03.png' alt=''><p>QQ</p></a></li>"
+            +"</ul>"
+            +"<div class='cancel' onclick='sClose()'>取消</div>"
+            +"</div>";
+
+        //分享按钮事件
+        $(".share").on('click',function(){
+            alertBox();
+            $("#mask").append(shareCon);
+            var $shareCon = $(".share_con");
+            $shareCon.css('bottom','-'+$shareCon.height()+'px');
+            $shareCon.animate({
+                bottom:0
+            },300,function(){
+            });
+
+            //遮罩层点击事件
+            $("#mask").click(function(){
+                $shareCon.animate({
+                    bottom: '-'+$shareCon.height()+'px'
+                },200,function(){
+                    $(".share_con").remove();
+                    clearBox();
+                });
+            });
+
+            //阻止冒泡
+            $(".share_con").click(function(event){
+                event.stopPropagation();
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

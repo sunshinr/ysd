@@ -1,0 +1,37 @@
+body{ background: #fff; box-sizing: border-box;}
+
+/*详情容器*/
+.detailds_con{ border-top:solid 2px #e7e7e7; padding: 1.6rem; background: #fff; margin-bottom: 6rem}
+.detailds_con h1{ font-weight: 500; font-size: 1.7rem; text-align: center; margin: 1rem 0}
+.detailds_con span{ font-weight: 100; color: #666666; display: block; font-size: 1.1rem; text-align: center; margin-bottom: 0.4rem}
+
+.detailds_text{ margin-top: 1rem}
+.detailds_text p{ font-size: 1.2rem; line-height: 3rem; text-align:justify}
+.detailds_text img{ width: 100%; margin: 2.4rem 0}
+.detailds_text h3{ font-weight: 600; font-size: 1.4rem; margin-bottom: 1rem;}
+
+
+
+/*底部按钮*/
+.bottom_btn{ height: auto;
+    overflow: hidden; position: fixed; bottom: 0; width: 100%; max-width: 640px; text-align: center; background: #fff;
+    border-top:solid 1px #e4e4e4;}
+.bottom_btn ul{  width: 100%; display: flex}
+.bottom_btn li{ display:inline-block; width: 34%; padding: 0.6rem; }
+.bottom_btn li:active{ background: #e7e7e7; }
+.bottom_btn li img{ width: 2.2rem; height: 2.2rem; margin-bottom: 0.4rem }
+.bottom_btn li p{ font-size: 1rem; color: #9c9c9c; height: 1rem; line-height: 1rem; }
+
+
+.active p{color: #03a9f4 !important}
+
+.share_con{width: 100%; height: auto; background: #fff; border-radius:4px 4px 0 0; position: absolute;}
+.share_con h3{ font-size: 1.4rem; text-align: center; padding: 2rem; font-weight: 500}
+.share_con ul{ text-align: center}
+.share_con ul li{ display: inline-block; margin: 0 1.6rem}
+.share_con ul li img{ width: 4rem; margin-bottom: 1rem}
+.share_con ul li p{font-size: 1.2rem; font-weight: 500 }
+.cancel{ border-top: solid 1px #e4e4e4; display: block; padding:1.4rem; text-align: center; margin-top: 1.6rem}
+
+
+#mask{ width: 100%; height: 100%; background: rgba(0,0,0,0.6); position: fixed; top:0; display: none}

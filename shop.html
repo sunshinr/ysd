@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>商城</title>
+		<link rel="stylesheet" href="css/mui.min.css" media="screen">		
+		<link rel="stylesheet" href="css/reset.css" media="screen">
+		<link rel="stylesheet" href="css/common.css" media="screen">
+		<link rel="stylesheet" href="css/shop.css" media="screen">
+
+
+	</head>
+
+	<body>
+		<header>
+			<i><img src="images/health_1.png"/></i>
+			<h1>商城</h1>
+			<i><img src="images/health_2.png"/></i>
+		</header>
+		<div class="shop">
+			<div class="mui-slider" id="slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img src="images/shop_02.png" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="images/shop_02.png" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="images/shop_02.png" /></a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#"><img src="images/shop_02.png" /></a>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#"><img src="images/shop_02.png" /></a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+			<div class="shop-box">
+				<a class="box-child" href="page/shop/classQuery.html">
+					<i></i>
+					<span>分类查询</span>
+				</a>
+				<a class="box-child" href="page/shop/shopping-cart.html">
+					<i></i>
+					<span>购物车</span>
+				</a>
+				<a class="box-child"  href="page/shop/my-order.html">
+					<i></i>
+					<span>我的订单</span>
+				</a>
+				<a class="box-child" href="personal-center.html">
+					<i></i>
+					<span>会员中心</span>
+				</a>
+			</div>
+			<div class="shop-content">
+				<h4>饮食健康<a href="page/shop/goods-list.html"><i></i></a></h4>
+				<ul>
+					<li>
+						<span class="shop-img"><img src="images/s-list_03.jpg"></span>
+						<p>[新年优惠]减肥先减脂 智能体脂称</p>
+						<div class="price">￥119.0<span>￥189.0</span></div>
+					</li>
+					<li>
+						<span class="shop-img"><img src="images/s-list_05.jpg"></span>
+						<p>【新年优惠】家用智能 跑步机</p>
+						<div class="price">￥1299.0<span>￥1999.0</span></div>
+					</li>
+					<li>
+						<span class="shop-img"><img src="images/s-list_10.jpg"></span>
+						<p>【新年优惠】减肥增肌营养蛋白粉</p>
+						<div class="price">￥119.0<span>￥189.0</span></div>
+					</li>
+					<li>
+						<span class="shop-img"><img src="images/s-list_09.jpg"></span>
+						<p>【新年优惠】 减肥营养早餐套餐</p>
+						<div class="price">￥119.0<span>￥189.0</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="shop-content">
+				<h4 class="color_fbbc42">今日必抢</h4>
+				<ul>
+					<li>
+						<span class="shop-img"><img src="images/s-list_03.jpg"></span>
+						<p>[新年优惠]减肥先减脂 智能体脂称</p>
+						<div class="price">￥119.0<span>￥189.0</span></div>
+					</li>
+					<li>
+						<span class="shop-img"><img src="images/s-list_05.jpg"></span>
+						<p>【新年优惠】家用智能 跑步机</p>
+						<div class="price">￥1299.0<span>￥1999.0</span></div>
+					</li>
+					<li>
+						<span class="shop-img"><img src="images/s-list_10.jpg"></span>
+						<p>【新年优惠】减肥增肌营养蛋白粉</p>
+						<div class="price">￥119.0<span>￥189.0</span></div>
+					</li>
+				</ul>
+			</div>			
+		</div>
+		<footer>
+			<a href="index.html">
+				<span></span>
+			</a>
+			<a href="shop.html">
+				<span class="ative"></span>
+			</a>
+			<a href="health-center.html">
+				<span></span>
+			</a>
+
+			<a href="community.html">
+				<span></span>
+			</a>
+			<a href="personal-center.html">
+				<span></span>
+			</a>
+		</footer>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/zepto.sqq.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script>
+			var gallery = mui('#slider');
+			gallery.slider({
+				interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+		</script>
+	</body>
+
+</html>

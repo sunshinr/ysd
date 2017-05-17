@@ -1,0 +1,63 @@
+ul{
+	display: flex;
+	width: 100%;
+	flex-direction:column;	
+}
+li{
+	height: 11rem;
+	width: 100%;
+
+}
+li>div{
+	width: 100%;
+	height: 9rem;
+	background: #FFFFFF;
+	display: flex;
+}
+li>p{
+	height: 2.5rem;
+	line-height: 2.5rem;
+	padding-left: 1.5rem;
+	font-size: 1.2rem;
+	color: #4f4f4f;
+}
+.score{
+	width: 25%;
+	height: 100%;
+	font-size: 2rem;
+	color: #FFFFFF;
+	display: flex;
+}
+.score span{
+	display: inline-block;
+	width: 4.5rem;
+	height: 4.5rem;
+	text-align: center;
+	line-height: 4.5rem;
+	border-radius: 50%;
+	margin: auto;
+}
+.score font{
+	font-size: 0.9rem;
+}
+.count{
+	width: auto;
+	height: 100%;
+	flex-grow:1;
+	font-size: 1.4rem;
+	color: #4F4F4F;
+	padding: 1.5rem 0 1.5rem 0;
+	display: flex;
+	flex-direction:column;
+	justify-content: space-around;
+}
+.count>div{
+	display: flex;
+}
+.count>div>div{
+	flex: 1;
+}
+.count span{
+	color: #808080;
+	margin: 0 1rem;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>快速问诊</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/quickly-inquiry.css">
+
+    <script type="text/javascript" src="/js/zepto.min.js"></script>
+    <script type="text/javascript" src="/js/zepto.sqq.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+
+
+</head>
+<body>
+		<header>
+			<a href="javascript:history.go(-1)"><i><img src="/images/left-ico.png"/></i></a>
+			<h1>快速问诊</h1>
+		</header>
+	
+<div class="quickly-wrap">
+
+    <ul class="quickly-menu clear">
+        <li>
+            <a href="Int_guide.html">
+                <p>智能导诊</p>
+            </a>
+
+        </li>
+        <li class="active">
+            <a href="#">
+                专家问诊
+            </a>
+
+        </li>
+    </ul>
+
+    <div class="quickly-main">
+        <h3>请选择地区</h3>
+
+        <div id="city_china_val" >
+
+            <div>
+                <span>省:</span> <select class="province" data-first-title="请选择" disabled="disabled"></select>
+                <i></i>
+            </div>
+            <div>
+                <span>市:</span> <select class="city" data-first-title="请选择" disabled="disabled"></select>
+                <i></i>
+            </div>
+
+        </div>
+
+
+        <h3 class="departments-title">请选择科室</h3>
+
+        <div class="choose-departments">
+            <span>科室</span>
+            <select>
+                <option value="请选择">请选择</option>
+                <option value="内科">内科</option>
+                <option value="外科">外科</option>
+                <option value="儿科">儿科</option>
+                <option value="神经科">神经科</option>
+                <option value="妇科">妇科</option>
+                <option value="耳鼻喉科">耳鼻喉科</option>
+                <option value="口腔科">口腔科</option>
+                <option value=" 泌尿科"> 泌尿科</option>
+                <option value="骨科">骨科</option>
+                <option value="精神科">精神科</option>
+            </select>
+            <i></i>
+        </div>
+
+
+        <a href="expert-list.html"><button type="submit" class="affirm-btn">确认</button></a>
+
+    </div>
+
+
+    <script src="/js/jquery.cxselect.min.js"></script>
+
+    <script>
+
+        $.cxSelect.defaults.url = '/js/cityData.min.json';
+
+
+        $('#city_china_val').cxSelect({
+
+            selects: ['province', 'city'],
+
+            nodata: 'none'
+
+        });
+
+
+    </script>
+</div>
+</body>
+</html>

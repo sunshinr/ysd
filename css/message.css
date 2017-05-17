@@ -1,0 +1,103 @@
+body{ background: #f5f5f5; transition: all 0.8s}
+p{text-align: justify}
+
+
+
+/*共有样式*/
+.message{ padding: 2.5rem 1.5rem 5rem 1.5rem }
+.message_ul{height: auto; overflow: hidden}
+.message_ul li{ height: auto;  width: 18.2rem; overflow: hidden; margin-bottom: 2rem;}
+.message_ul li .Head_img{ width: 3rem; height: 3rem; border-radius:50%}
+
+/*对方消息*/
+.message ul .Other{float: left}
+.message ul .Other img{ float: left}
+.message ul .Other p img{ width:auto; max-width: 100%; border-radius:3px}
+.message ul .Other .message_con{ width: 13.7rem ; height:auto; overflow: hidden; background: url("../images/message_06.png") no-repeat; padding-left:0.8rem;  background-size:0.9rem; float: right; margin-top: 0.4rem  }
+.message ul .Other .message_con p{ padding: 0.8rem 1.2rem; word-break:break-all; background: #fff; display: inline-block; float: left; width: auto; font-size: 1.2rem; line-height: 2rem; border-radius:8px}
+
+
+/*自己消息*/
+.message ul .My{float: right}
+.message ul .My .Head_img{ float: right}
+.message ul .My p img{ width:auto; max-width: 100%; border-radius:3px}
+.message ul .My .message_con{ width: 13.7rem ; height:auto; overflow: hidden; background: url("../images/message_14.png") 100% 0 no-repeat; padding-right:0.8rem;  background-size:0.9rem; float: left; margin-top: 0.4rem ; }
+.message ul .My .message_con p{ padding: 0.8rem 1.2rem; word-break:break-all; position: relative; background: #03a9f4; display: inline-block; float: right; width: auto;  color: #fff; font-size: 1.2rem; line-height: 2rem; border-radius:8px; }
+
+
+/*时间*/
+.message_time{ font-size: 1.4rem; height: 1.6rem; line-height: 1.6rem; font-weight: 100; color: #b2b2b2; float: left; display: block; width: 100%; text-align: center; margin-bottom: 1.5rem}
+
+
+/*底部输入框*/
+.bottom{position: fixed; bottom: 0; width: 100%; max-width: 640px; left: 0; }
+
+.extend{ padding: 1rem 1.2rem; padding-bottom: 1.6rem; background: #fff }
+.extend li{ display: inline-block; margin-left: 1rem }
+.extend li img{padding: 1rem; width: 2.9rem; border:solid 1px #dcdcdc; border-radius:4px}
+.extend li p{ text-align: center; margin: 0.6rem 0; font-size: 1.3rem; color: #ccc}
+
+
+/*发送图片*/
+#upImg{padding: 1rem; width: 2.9rem;  border-radius:4px;}
+#fileImage{ display:none }
+#preview{ display: none; }
+#fileSubmit{ display: none;}
+
+#file{ display: none}
+
+.Success_icon{ width: 1rem;
+    position: relative;}
+
+
+
+
+.Input_box{ background: #fff; height: auto; overflow: hidden; padding: 1rem 1.2rem; width: 100%; position: relative; box-sizing: border-box; max-width: 640px; left: 0}
+.Input_box .Input_div{ height: auto; border-bottom: solid 1px #e8e7e7; width: 85%; float: left; position: relative}
+.Input_box #Send{ width: 13%; float: right; font-size: 1.6rem; color: #ccc; background: none; position: absolute; bottom: 1.6rem; right: 0.6rem}
+.Input_box .text{ float: left; width: 88%; color: #666; font-size: 1.2rem; height: auto;  min-height: 2rem; max-height: 8rem; overflow: auto; padding: 0.5rem; padding-left: 0; line-height: 2rem; }
+.Input_box span{float: right;  position: absolute; bottom: 0.8rem; right: 0 }
+.Input_box span img{width: 1.4rem}
+
+
+
+
+/*遮罩*/
+#mask{ width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: fixed; top:0; display: none}
+.comment_con{ width: 19.2rem; height: auto; background: #fff; position: relative; border-radius:3px; animation: warringScale 0.5s;  -webkit-animation: warringScale 0.5s;   }
+.comment_con .warring{ padding: 2rem; text-align: center; border-bottom: solid 1px #46c6f3; font-size: 1.4rem; line-height: 2rem}
+.comment_btn{text-align: center; height: auto; overflow: hidden}
+.comment_btn a{display: inline-block; padding: 1.2rem 0; width: 49%; text-align: center; float: left; color: #46c6f3; font-size: 1.2rem}
+.comment_btn a:first-child{border-right: solid 1px #46c6f3}
+
+
+#mask img{ position: relative; animation: warringScale 0.5s; width:100%;}
+
+@keyframes warringScale {
+
+0%   {transform: scale(0, 0); }
+75%  {transform: scale(1.2, 1.2); }
+100% {transform: scale(1, 1); }
+
+}
+@-webkit-keyframes warringScale /* Safari 和 Chrome */
+{
+    0%   {transform: scale(0, 0); }
+    75%  {transform: scale(1.2, 1.2); }
+    100% {transform: scale(1, 1); }
+}
+
+
+header a:nth-of-type(1){
+	margin-left: 1.4rem;
+}
+header a:nth-of-type(2){
+	margin-right: 1.4rem;
+	float: right;
+}
+header i{
+	width: 2rem;
+	height: 2rem;
+	display: inline-block;
+	margin-top: 1.5rem;	
+}

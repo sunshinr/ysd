@@ -1,0 +1,57 @@
+body{
+	background: #FFFFFF;
+}
+.health .top{
+	padding: 3rem 1.2rem 1rem 1.2rem;position: relative;
+    z-index: 10;
+    box-shadow: 1px 2px 4px #e0dfdf;
+}
+.health .top a{
+	display: inline-block;width: 2.25rem;height: 1.7rem;float: left;margin-top: 0.3rem;
+}
+.health .top a img{
+	width: 100%;
+}
+.health .top h1{
+	font-size: 1.7rem;width: 100%;text-align: center;
+}
+
+.health .content{
+	overflow: hidden;
+}
+.health .content li{
+	padding: 1.5rem  1.1rem;border-bottom: solid 1px #e4e4e4;padding: 1.5rem 1.1rem 0 1.1rem;
+}
+.health .content li h4{
+	font-size: 1.4rem;
+}
+.health .content li p{
+	font-size: 1.2rem;margin-top: 1.7rem;line-height: 2rem;
+}
+.content li .li-bot{
+	padding: 1.7rem 1.4rem;width: 100%;
+}
+.content li .li-bot span{
+	display: inline-block;width: 32%;
+}
+.content li .li-bot span i{
+	display: inline-block;width:1.5rem;height:1.6rem;margin-right: 0.6rem;vertical-align: sub;
+}
+.li-bot span:first-of-type i{
+	background: url(../images/zx-icon_03.png)0 0 no-repeat;
+	background-size: 100%;
+}
+.li-bot span:nth-of-type(2) i{
+	background: url(../images/zx-icon_05.png)0 0 no-repeat;
+	background-size: 100%;
+}
+.li-bot span:nth-of-type(2){
+	text-align: center;
+}
+.li-bot span:last-of-type i{
+	background: url(../images/zx-icon_07.png)0 0 no-repeat;
+	background-size: 100%;
+}
+.li-bot span:last-of-type{
+	text-align: right;
+}

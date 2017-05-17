@@ -1,0 +1,145 @@
+body {
+  background: #FFFFFF;
+}
+.quickly-header {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem 0 1rem;
+  border-bottom: 1rem solid #f6f6f6;
+}
+.quickly-header a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.quickly-header a:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 3rem;
+  background: url("../images/case-icon_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+.quickly-header p {
+  width: 100%;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 1.7rem;
+}
+.quickly-menu {
+  background: #ffffff;
+  text-align: center;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.quickly-menu li {
+  width: 50%;
+  padding: 2rem 0;
+  float: left;
+  border-bottom: 2px solid #dddddd;
+}
+.quickly-menu li a {
+  display: inline-block;
+  color: #4f4f4f;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+.quickly-menu .active {
+  border-bottom: 2px solid #4e9bea;
+  padding-bottom: 2rem;
+}
+.select-style {
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eeeeee;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+.select-style i {
+  display: inline-block;
+  width: 1.2rem;
+  height: 2.2rem;
+  background: url("../images/right-icon.png") no-repeat;
+  background-size: 100%;
+  float: right;
+}
+.select-style select {
+  width: 80%;
+  border: none;
+  margin-left: 3%;
+  overflow: hidden;
+  -webkit-appearance: none;
+  appearance: none;
+  color: #dddddd;
+}
+.quickly-main {
+  padding: 2rem;
+}
+.quickly-main h3 {
+  margin: 1rem 0 1rem;
+  color: #4f4f4f;
+  font-size: 1.4rem;
+}
+.quickly-main #city_china_val div {
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eeeeee;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+.quickly-main #city_china_val div i {
+  display: inline-block;
+  width: 1.2rem;
+  height: 2.2rem;
+  background: url("../images/right-icon.png") no-repeat;
+  background-size: 100%;
+  float: right;
+}
+.quickly-main #city_china_val div select {
+  width: 80%;
+  border: none;
+  margin-left: 3%;
+  overflow: hidden;
+  -webkit-appearance: none;
+  appearance: none;
+  color: ##655a5a;
+}
+.quickly-main .departments-title {
+  margin: 2rem 0;
+}
+.quickly-main .choose-departments {
+  font-size: 1.4rem;
+  border-bottom: 1px solid #eeeeee;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+.quickly-main .choose-departments i {
+  display: inline-block;
+  width: 1.2rem;
+  height: 2.2rem;
+  background: url("../images/right-icon.png") no-repeat;
+  background-size: 100%;
+  float: right;
+}
+.quickly-main .choose-departments select {
+  width: 80%;
+  border: none;
+  margin-left: 3%;
+  overflow: hidden;
+  -webkit-appearance: none;
+  appearance: none;
+  color: ##655a5a;
+}
+.quickly-main .affirm-btn {
+  width: 62%;
+  margin: 3rem 0 3rem 19%;
+  background: #1696e5;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}

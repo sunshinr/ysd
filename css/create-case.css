@@ -1,0 +1,74 @@
+body {
+  background: #ffffff;
+}
+.consult-header {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem 0 1rem;
+  border-bottom: 1rem solid #f6f6f6;
+}
+.consult-header a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.consult-header a:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 3rem;
+  background: url("../images/case-icon_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+.consult-header p {
+  width: 100%;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 1.7rem;
+}
+.case-main {
+  background: #ffffff;
+  padding: 2rem;
+}
+.case-main #case-description {
+  width: 100%;
+  margin: 0 auto;
+  color: #4f4f4f;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #dddddd;
+}
+.case-main h2 {
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+  color: #424242;
+}
+.case-main textarea {
+  width: 100%;
+  border: 1px solid #e0dfdf;
+  margin-top: 2rem;
+  resize: none;
+  outline: none;
+  padding: 1rem;
+  color: #404040;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border-radius: 1rem;
+}
+button[type='submit'] {
+  width: 62%;
+  margin: 3rem 0 3rem 19%;
+  padding: 1.3rem 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  background: #03a9f4;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
+}

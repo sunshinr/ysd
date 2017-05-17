@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>购物车</title>
+		<link rel="stylesheet" href="/css/reset.css" media="screen">
+		<link rel="stylesheet" href="/css/common.css" media="screen">
+		<link rel="stylesheet" href="/css/shopping-cart.css" media="screen">
+		
+		<script src="/js/zepto.min.js"></script>
+		<script src="/js/zepto.sqq.js"></script>
+	<script type="text/javascript">
+        $(function() {
+           $("#checkAll").click(function() {
+                $('input[name="subBox"]').attr("checked",this.checked); 
+            });
+            var $subBox = $("input[name='subBox']");
+            $subBox.click(function(){
+                $("#checkAll").attr("checked",$subBox.length == $("input[name='subBox']:checked").length ? true : false);
+            });
+        });
+    </script>		
+	</head>
+
+	<body>
+		<header>
+			<i><a href="javascript:history.go(-1)"><img src="/images/left-ico.png"/></a></i>
+			<h1>购物车</h1>
+		</header>
+		<div class="shopcart">
+			<div class="main_con_allchoose">
+				<span class="circle"></span>全选 <a href="javascript:del_goods()"><img src="/images/goods_del.png" /></a>
+			</div>
+			<div class="main_con_goods">
+				<ul class="shopcart-box">
+					<li><span class="circle"></span>
+						<img src="/images/good_03.jpg">
+						<div class="shop-text">
+							<h4>Kings Ginger</h4>
+							<p>￥<span id="price">190.21</span></p>
+							<div class="num">
+								<div class="btn-list">
+									<i id="decrease"></i>
+									<span id="num">1</span>
+									<i id="increase"></i>
+								</div>
+								<div class="inventory">(库存2683件)</div>
+							</div>
+							<div class="delete" id="edit"></div>
+						</div>
+						<div class="little-total">小计：<span id="single-total">190.21</span></div>						
+					</li>
+				</ul>
+			</div>
+			<ul class="shopcart-box" id="ShopBox">
+				<li>
+					<input type="checkbox" name="subBox" value="" />
+					<img src="/images/good_03.jpg">
+					<div class="shop-text">
+						<h4>Kings Ginger</h4>
+						<p>￥<span id="price">190.21</span></p>
+						<div class="num">
+							<div class="btn-list">
+								<i id="decrease"></i>
+								<span id="num">1</span>
+								<i id="increase"></i>
+							</div>
+							<div class="inventory">(库存2683件)</div>
+						</div>
+						<div class="delete" id="edit"></div>
+					</div>
+					<div class="little-total">小计：<span id="single-total">190.21</span></div>
+				</li>
+				<li>
+					<input type="checkbox" name="subBox" value="" />
+					<img src="/images/goods-bg_03.jpg">
+					<div class="shop-text">
+						<h4>ALBAE</h4>
+						<p>￥<span id="price">236.06</span></p>
+						<div class="num">
+							<div class="btn-list">
+								<i id="decrease"></i>
+								<span id="num">1</span>
+								<i id="increase"></i>
+							</div>
+							<div class="inventory">(库存2683件)</div>
+						</div>
+						<div class="delete" id="edit"></div>
+					</div>
+					<div class="little-total">小计：<span id="single-total">236.06</span></div>
+				</li>
+			</ul>
+		</div>
+		<div class="shopcart-bottom">
+			<span class="money">实付款：￥<a id="total-num">426.06</a></span>
+			<a href="write-order-form.html"><span class="pay">去结算</span></a>
+		</div>
+
+		<script>
+			$(function() {
+				$('li').each(function(i, v) {
+					var num = $(v).find('#num').text();
+					var price = parseFloat($(v).find('#price').text());
+					$(v).find('#decrease').click(function() {
+						if(num > 1) {
+							num--;
+						}
+
+						$(v).find('#num').text(num);
+						var ListNum = (price * num).toFixed(2);
+						$(v).find('#single-total').text(ListNum);
+						setTotal();
+					});
+					$(v).find('#increase').click(function() {
+						num++;
+						$(v).find('#num').text(num);
+						var ListNum = (price * num).toFixed(2);
+						$(v).find('#single-total').text(ListNum);
+						setTotal()
+					});
+
+					$(v).find('#edit').click(function() {
+						$(this).parent().parent().remove();
+						setTotal();
+					});
+				});
+
+				function setTotal() {
+					var s = 0;
+					$('#ShopBox li').each(function() {
+						s += parseFloat($(this).find('#num').text() * $(this).find('#price').text());
+					});
+					$('#total-num').html(s.toFixed(2));
+				}
+				setTotal();
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,105 @@
+body {
+  background: #f6f6f6;
+}
+.consult-header {
+  position: relative;
+  background: #ffffff;
+  padding: 1rem 0 1rem;
+  border-bottom: 1px solid #e0dfde;
+}
+.consult-header a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.consult-header a:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 1rem;
+  background-size: 100% 100%;
+}
+.consult-header p {
+  width: 100%;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 1.7rem;
+}
+.inquiry-main {
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  margin-top: 1rem;
+  width: 94%;
+  margin-left: 3%;
+}
+.inquiry-main > img {
+  width: 21%;
+  margin: 0.6rem 3% 0 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+}
+.inquiry-main dl {
+  position: relative;
+  margin: 1.6rem 0 0 0;
+  width: 73%;
+  float: left;
+  font-size: 1.2rem;
+  color: #4f4f4f;
+}
+.inquiry-main dl dt {
+  margin-bottom: 0.6rem;
+  color: #000000;
+}
+.inquiry-main dl dd:last-child {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.1rem;
+}
+.inquiry-main dl dd:last-child img {
+  width: 1rem;
+  height: 2rem;
+}
+.inquiry-main button {
+  position: absolute;
+  right: 0;
+  top: 0.6rem;
+  color: #03a9f4;
+  font-size: 1.2rem;
+  background: #ffffff;
+  border: 1px solid #03a9f4;
+  padding: 0.4rem 1rem;
+}
+.problem-description {
+  width: 94%;
+  margin-left: 3%;
+  background: #ffffff;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+.problem-description h2 {
+  font-size: 1.4rem;
+  color: #424242;
+}
+.problem-description textarea {
+  width: 100%;
+  border: 1px solid #e0dfdf;
+  margin-top: 2rem;
+  resize: none;
+  outline: none;
+  padding: 1rem;
+  color: #404040;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  line-height: 2rem;
+}
+button[type='submit'] {
+  width: 94%;
+  margin: 3rem 0 1rem 3%;
+  padding: 1.3rem 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  background: #03a9f4;
+}

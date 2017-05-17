@@ -1,0 +1,69 @@
+body {
+  background: #f6f6f6;
+}
+.plan-header {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem 0 1rem;
+  border-bottom: 1px solid #e0dfde;
+}
+.plan-header a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.plan-header a:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 3rem;
+  background: url("../images/inquiry-iocn_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+.plan-header p {
+  width: 100%;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 1.7rem;
+}
+.plan-main {
+  padding: 1.4rem 2rem;
+  background: #ffffff;
+  margin-top: 1.5rem;
+  width: 94%;
+  margin-left: 3%;
+  position: relative;
+}
+.plan-main > img {
+  width: 21%;
+  margin-right: 3%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+}
+.plan-main dl {
+  margin-top: 0.6rem;
+  width: 56%;
+  float: left;
+}
+.plan-main dl dt {
+  margin-bottom: 0.5rem;
+  color: #4f4f4f;
+  font-size: 1.5rem;
+}
+.plan-main dl dd {
+  font-size: 1.1rem;
+  color: #bab9b9;
+}
+.plan-main button {
+  position: absolute;
+  right: 1.2rem;
+  top: 3rem;
+  color: #03a9f4;
+  font-size: 1.2rem;
+  background: #ffffff;
+  border: 1px solid #03a9f4;
+  padding: 0.4rem 1rem;
+}

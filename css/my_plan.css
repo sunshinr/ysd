@@ -1,0 +1,39 @@
+ul{
+	display: flex;
+	flex-direction:column;	
+}
+li{
+	height: 9rem;
+	width: 100%;
+	display: flex;
+	align-items: center;	
+	justify-content: space-between;
+	background: #FFFFFF;
+	border-bottom: 1px solid #eae9e9;
+}
+li div:nth-of-type(1){
+	width: 6.5rem;
+	height: 6.5rem;
+	margin-left: 1rem;
+}
+li div img{
+	width: 100%;
+}
+li div:nth-of-type(2){
+	width: 23rem;
+	height: 6.5rem;
+}
+li div p:nth-of-type(1){
+	font-size: 1.5rem;
+	color: #363838;
+	line-height: 2.5rem;
+	margin: .5rem auto;
+}
+li div p:nth-of-type(2){
+	font-size: 1.1rem;
+	color: #8b8b8b;
+}
+p i{
+	color: #e26500;
+}
+

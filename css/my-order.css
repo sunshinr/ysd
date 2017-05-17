@@ -1,0 +1,90 @@
+body {
+  background: #ffffff;
+}
+.bg-write {
+  background: #ffffff;
+}
+.order-wrap .order-title {
+  background: #ffffff;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #363838;
+  padding: 1.5rem;
+  border-bottom: 0.8rem solid #f5f5f5;
+}
+.order-wrap .order-main .order-main-title {
+  background: #ffffff;
+  text-align: center;
+  padding: 0.8rem 0;
+  color: #9e9e9e;
+  font-size: 1.3rem;
+  border-bottom: 0.5rem solid #f5f5f5;
+}
+.order-wrap .order-main .order-main-title i {
+  position: relative;
+  top: 0.3rem;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../images/order_03.png");
+  background-size: 100%;
+}
+.order-wrap .order-main .order-number {
+  padding: 1rem;
+  font-size: 1.3rem;
+  color: #9c9c9c;
+  border: 2px solid #f5f5f5;
+}
+.order-wrap .order-main .order-number span {
+  float: right;
+}
+.order-wrap .order-main .order-list-main {
+  background: #ffffff;
+  padding: 2rem 1.5rem 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+.order-wrap .order-main .order-list-main img {
+  float: left;
+  width: 9.5rem;
+  height: 7.5rem;
+  margin-right: 1.5rem;
+  border: 1px solid #dadada;
+}
+.order-wrap .order-main .order-list-main dl {
+  float: left;
+}
+.order-wrap .order-main .order-list-main dl dt {
+  font-size: 1.5rem;
+  color: #363838;
+}
+.order-wrap .order-main .order-list-main dl dd {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #b1b1b1;
+}
+.order-wrap .order-main .order-list-main dl .price {
+  color: #d83d11;
+}
+.order-wrap .order-main .order-list-main div {
+  float: right;
+}
+.order-wrap .order-main .order-list-main div button {
+  width: 5.5rem;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+}
+.order-wrap .order-main .order-list-main div button:first-child {
+  background: #f5f5f5;
+  color: #676666;
+  margin-bottom: 1.5rem;
+}
+.order-wrap .order-main .order-list-main div button:last-child {
+  background: #03a9f4;
+  color: #ffffff;
+}

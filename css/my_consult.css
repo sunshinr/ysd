@@ -1,0 +1,62 @@
+.headline{
+	height: 4rem;
+	width: 100%;
+	background: #FFFFFF;
+	margin-top: 1rem;
+	display: flex;
+}
+.headline li{
+	height: 100%;
+	width: 50%;
+	display: flex;
+	font-size: 1.2rem;
+	justify-content: space-around;
+}
+.headline li div{
+	width:5rem;
+	text-align: center;
+	height: 100%;
+	display: inline-block;
+	line-height: 4rem;
+}
+.headline li.ative div{
+	border-bottom: 2px #03a9f4 solid;
+	color: #03a9f4;
+}
+.consult-content li{
+	background: #FFFFFF;
+}
+.consult-content li>p{
+	color: #a6a4a4;
+	font-size: 1rem;
+	text-align: right;
+	padding-right: 1rem;
+	line-height: 3rem;
+}
+.consult-content li>div{
+	border: 1px solid #e0e0e0;
+}
+.consult-content li>div p{
+	font-size: 1.1rem;
+	color: #504f4f;
+	padding-top: 1.5rem;
+	padding-left: 1.1rem;
+}
+
+.consult-content li>div p .name{
+	font-size: 1.5rem;
+	margin: 0 .5rem;
+	color: #1a1919;
+}
+.consult-content li>div p .sex{
+	color: #e77505;
+	margin: 0.5rem;
+}
+
+.summary{
+	color: #545454;
+	text-indent:3em;
+	line-height: 2;
+	font-size: 1.2rem;
+	padding: 1.5rem 1.1rem;	
+}

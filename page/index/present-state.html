@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>当前状态</title>
+		<link rel="stylesheet" href="/css/reset.css" media="screen">
+		<link rel="stylesheet" href="/css/common.css" media="screen">
+		<link rel="stylesheet" href="/css/present-state.css" media="screen">
+		<script src="/js/echarts.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<i><a href="/index.html"><img src="/images/left-ico.png"/></a></i>
+			<h1>当前状态	</h1>
+			<i><a href="Historical_state.html"><img src="/images/history-icon.png"/></a></i>
+		</header>
+		<div class="present">
+			<div class="score">
+				<h4>当前状态分数</h4>
+				<div class="score-number">90<span>分</span></div>
+				<p>亚健康 | 一项指标异常</p>
+				<div class="charts" id="main"></div>
+
+			</div>
+			<ul class="supplement">
+				<li>
+					<h4>运动量不足</h4>
+					<p>建议每周保证定量运动，如跑步，跳绳等活动来改善身体状况。</p>
+				</li>
+				<li>
+					<h4>改善意见</h4>
+					<p>1.多参加体育锻炼。</p>
+					<p> 2.饮食宜偏向清淡，荤素适当搭配。</p>
+				</li>
+			</ul>
+			<div class="list">
+				<h3><span>改善方案</span><a href="#">更多 ></a></h3>
+				<ul class="list-ul">
+					<li>
+						<div class="list-img">
+							<div class="img-box"><img src="/images/state-img_03.jpg"></div>
+						</div>
+						<div class="list-right">
+							<h4>30天降血糖计划</h4>
+							<p>26人加入该计划</p>
+							<div class="btn"><a href="">加入</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list-img">
+							<div class="img-box"><img src="/images/state-img_07.jpg"></div>
+						</div>
+						<div class="list-right">
+							<h4>28天降脂计划</h4>
+							<p>32人加入该计划</p>
+							<div class="btn">加入</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="list">
+				<h3><span>推荐医生</span><a href="#">更多 ></a></h3>
+
+				<ul class="list-ul">
+					<li>
+						<div class="list-img">
+							<div class="img-box"><img src="/images/state-img_10.jpg"></div>
+						</div>
+						<a href="doctor-detail-shadow.html">
+						<div class="list-right">
+							<h4>张娇娇</h4>
+							<p class="recommend">主治医师<span>神经科</span></p>
+						</div>
+						</a>
+					</li>
+					<li>
+						<div class="list-img">
+							<div class="img-box"><img src="/images/state-img_13.jpg"></div>
+						</div>
+						<div class="list-right">
+							<h4>程心</h4>
+							<p class="recommend">主治医师<span>心血管科</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="list-img">
+							<div class="img-box"><img src="/images/state-img_16.jpg"></div>
+						</div>
+						<div class="list-right">
+							<h4>丁晓燕</h4>
+							<p class="recommend">主治医师<span>内科</span></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script src="/js/zepto.min.js"></script>
+		<script src="/js/zepto.sqq.js"></script>
+		<script>
+			$(function() {
+				var width = $('#main').find('div').width();
+				console.log(width);
+				$('#main').css('height', width * 0.9);
+			});
+		</script>
+		<script>
+			var myChart = echarts.init(document.getElementById('main'));
+			option = {
+				radar: [{
+					indicator: [{
+							text: '营养',
+							max: 100
+						},
+						{
+							text: '运动',
+							max: 100
+						},
+						{
+							text: '热平衡',
+							max: 100
+						},
+						{
+							text: '心理',
+							max: 100
+						},
+						{
+							text: '用药',
+							max: 100
+						}
+					],
+					center: ['50%', '50%'],
+					radius: '50%',
+					startAngle: 90,
+					splitNumber: 4,
+					shape: 'circle',
+					name: {
+						formatter: '【{value}】',
+						textStyle: {
+							color: '#8bd9fd'
+						}
+					},
+					splitArea: {
+						areaStyle: {
+							color: ['#e0eefc', '#eef6fe',
+								'#f7fbff', '#fcfeff'
+							],
+							shadowColor: 'rgba(0, 0, 0, 0.3)',
+							shadowBlur: 2
+						}
+					},
+					axisLine: {
+						lineStyle: {
+							color: 'rgba(236, 245, 252, 1)'
+						}
+					},
+					splitLine: {
+						lineStyle: {
+							color: 'rgba(236, 245, 252, 1)'
+						}
+					}
+				}],
+				series: [{
+					name: '雷达图',
+					type: 'radar',
+					itemStyle: {
+						normal: {
+							//color:'rgba(236, 245, 252, 0)',
+							// borderWidth:0,
+							opacity: 0
+						},
+						emphasis: {
+							//color: '#ffffff',
+							lineStyle: {
+								width: 4
+							}
+						}
+
+					},
+					lineStyle: {
+						normal: {
+							color: '#005AAF',
+							width: 0
+						}
+					},
+					data: [
+
+						{
+							value: [70, 50, 60, 55, 50],
+							name: '图二',
+							areaStyle: {
+								normal: {
+									opacity: 0.8,
+									color: new echarts.graphic.RadialGradient(0.5, 0.5, 1, [{
+											color: '#33a9f9',
+											offset: 0
+										},
+										{
+											color: '#59bdff',
+											offset: 1
+										}
+									])
+								}
+							}
+						}
+					]
+				}]
+			};
+			myChart.setOption(option);
+		</script>
+
+	</body>
+
+</html>

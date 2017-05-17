@@ -1,0 +1,210 @@
+body {
+  background: #f5f5f5;
+}
+body .order-form {
+  background: #f5f5f5;
+  margin-bottom: 5rem;
+}
+body .order-form .title {
+  font-size: 1.7rem;
+  text-align: center;
+  width: 100%;
+  padding: 1.3rem 0;
+  background: #FFFFFF;
+}
+body .order-form .address {
+  background: #FFFFFF;
+  padding: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+body .order-form .address i {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.5rem;
+  background: url("../images/order-icon_03.png") 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  margin: 0 0.6rem;
+  vertical-align: top;
+}
+body .order-form .address span {
+  display: inline-block;
+  float: right;
+  width: 0.9rem;
+  height: 1.2rem;
+  background: url("../images/order-icon_06.png") 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+body .order-form .order-detail {
+  background: #FFFFFF;
+  margin: 0.4rem 0;
+  padding: 1rem;
+  overflow: hidden;
+}
+body .order-form .order-detail img {
+  border: solid 1px #dadada;
+  width: 25%;
+  float: left;
+}
+body .order-form .order-detail .order-text {
+  width: 70%;
+  float: right;
+}
+body .order-form .order-detail .order-text h4 {
+  font-size: 1.5rem;
+  margin: 0.6rem 0;
+}
+body .order-form .order-detail .order-text p {
+  font-size: 1.2rem;
+  color: #d83d11;
+  margin: 0.6rem 0;
+}
+body .order-form .order-detail .order-text p span {
+  font-size: 1.2rem;
+  color: #d83d11;
+}
+body .order-form .order-detail .order-text .num i {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: bottom;
+}
+body .order-form .order-detail .order-text .num i:first-child {
+  background: url("../images/order-btn_03.jpg");
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+body .order-form .order-detail .order-text .num i:last-child {
+  background: url("../images/order-btn_05.jpg");
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+body .order-form .order-detail .order-text span {
+  display: inline-block;
+  font-size: 1.2rem;
+  width: 2rem;
+  text-align: center;
+}
+body .order-form .order-style {
+  padding: 1rem;
+  font-size: 1.4rem;
+  overflow: hidden;
+  background: #FFFFFF;
+  margin-bottom: 0.3rem;
+}
+body .order-form .order-style span {
+  float: right;
+}
+body .order-form .order-style span a {
+  font-size: 1.2rem;
+  color: #888888;
+}
+body .order-form .order-style span i {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.6rem;
+  background: url("../images/order-arrow.png") 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  margin-left: 0.4rem;
+}
+body .order-form .order-style span i.active {
+  background: url("../images/order-arrow-up.png") 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+body .order-form .order-style .paying {
+  width: 24%;
+  line-height: 2.5rem;
+  border: solid 1px #03a9f4;
+  color: #03a9f4;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 6%;
+  margin: 1rem 38%;
+  display: none;
+}
+body .order-form .order-style .promotion-code {
+  width: 100%;
+  padding: 1rem 0 1rem 1rem;
+  font-size: 1.2rem;
+  display: none;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+body .order-form .order-style .promotion-code .code-text {
+  width: 50%;
+  font-size: 1rem;
+  border: solid 1px #cccccc;
+  -webkit-border-radius: 6%;
+  -moz-border-radius: 6%;
+  border-radius: 6%;
+  padding: 0.6rem 0.3rem;
+  margin-left: 0.3rem;
+}
+body .order-form .order-style .promotion-code .code-btn {
+  padding: 0.6rem 1rem;
+  background: #dddddd;
+  font-size: 1.1rem;
+  -webkit-border-radius: 9%;
+  -moz-border-radius: 9%;
+  border-radius: 9%;
+}
+body .order-form .order-list {
+  background: #FFFFFF;
+  padding: 0 0.5rem;
+}
+body .order-form .order-list li {
+  padding: 0.9rem 1rem;
+  font-size: 1.4rem;
+  color: #333333;
+}
+body .order-form .order-list li span {
+  color: #d83d11;
+  font-size: 1.2rem;
+  float: right;
+}
+body .order-form .integral {
+  font-size: 1.4rem;
+  color: #03a9f4;
+  padding: 1rem;
+}
+body .order-bottom {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+}
+body .order-bottom .order-money {
+  color: #e34500;
+  font-size: 1.5rem;
+  width: 65%;
+  display: inline-block;
+  float: left;
+  line-height: 5rem;
+  padding-left: 1rem;
+}
+body .order-bottom .order-money a {
+  color: #e34500;
+  font-size: 1.5rem;
+}
+body .order-bottom .order-pay {
+  position: relative;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  background: #03a9f4;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  width: 35%;
+  text-align: center;
+  line-height: 5rem;
+  height: 5rem;
+}

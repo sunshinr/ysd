@@ -1,0 +1,57 @@
+body {
+  background: #f6f6f6;
+}
+.details-header {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem 0 1rem;
+  border-bottom: 1px solid #e0dfde;
+}
+.details-header a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.details-header a:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 3rem;
+  background: url("../images/inquiry-iocn_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+.details-header p {
+  width: 100%;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 1.7rem;
+}
+.details-title {
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 1rem;
+  padding: 1.6rem 0.5rem;
+  font-size: 1.6rem;
+  color: #4f4f4f;
+}
+.details-title span {
+  float: right;
+  background: #03a9f4;
+  color: #ffffff;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
+  padding: 0.3em 1.2rem;
+  font-size: 1.1rem;
+}
+.details-main {
+  width: 94%;
+  margin: 0 3% 3rem 3%;
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+  color: #464646;
+  letter-spacing: 0.25rem;
+}

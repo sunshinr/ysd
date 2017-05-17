@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>历史记录</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/Historical_state.css" >
+    <script type="text/javascript" src="/js/jquery.min.js" ></script>
+    <script type="text/javascript" src="/js/echarts.simple.min.js"></script>
+    <script type="text/javascript" src="/js/zepto.min.js" ></script>
+    <script type="text/javascript" src="/js/zepto.sqq.js" ></script>
+</head>
+<body>
+
+		<header>
+			<a href="javascript:history.go(-1)"><i><img src="/images/left-ico.png"/></i></a>
+			<h1>历史记录</h1>
+		</header>
+
+<div class="state_tab_con">
+    <div class="year">
+        <div id="year_con"></div>
+    </div>
+
+</div>
+
+
+<div class="state_btn_con">
+     <span>日/月统计</span>
+     <div class="state_btn">
+         <span class="year_btn active">月</span>
+         <span class="day_btn">日</span>
+     </div>
+</div>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('year_con'));
+    //字体大小
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            show:true,
+            text: '折线图'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        grid: {
+            left: '3%',
+            right: '14%',
+            bottom: '10%',
+            containLabel: true,
+            borderWidth: 0
+
+        },
+
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: [],
+            show:true,
+            name:'时间',
+            nameLocation:'end',
+            nameTextStyle:{
+                color:'#f88101'
+
+            },
+            axisLabel:{
+                show:true,
+                inside: false,
+                textStyle:{
+                    fontSize:10
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLine:{
+                lineStyle:{
+                    color:'#0090ee',
+                    width:2
+                }
+            }
+        },
+        yAxis: {
+            show:true,
+            type:'value',
+            name:'分数',
+            nameLocation:'end',
+            splitLine:{
+                show:false
+            },
+            nameTextStyle:{
+                color:'#f88101'
+            },
+            axisLabel:{
+                show:true,
+                inside: false,
+                textStyle:{
+                    fontSize:10
+                }
+            },
+            axisTick:{
+                show:false
+            },
+            axisLine:{
+                lineStyle:{
+                    color:'#0090ee',
+                    width:2
+                }
+            }
+        },
+        series: [{
+            name: '分数',
+            type: 'line',
+            data: [],
+
+            itemStyle:{
+                normal:{
+                    color:'#0090ee',
+                    borderColor:'#0090ee'
+                }
+            },
+            lineStyle:{
+                normal:{
+                     width:1
+                }
+            },
+            areaStyle:{
+                normal:{
+                    color:'#fffffd'
+                }
+            }
+
+        }],
+        textStyle:{
+            color:'#949494',
+            fontSize: 10
+        }
+
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    // 以下异步加载数据
+    // $.get('data.json').done(function (data) {});
+    $(".state_btn span").click(function(){
+        if(!$(this).hasClass("active")){
+            $(this).addClass("active");
+            $(this).siblings().removeClass("active");
+            if($(this).hasClass("year_btn")) {
+                myChart.setOption({
+                    xAxis: {
+                        data: ["1","2","3","6","9","12","15","18","21","24","27","30","31"]
+                    },
+                    series: [{
+                        // 根据名字对应到相应的系列
+                        data: [70, 70, 75, 78, 80, 85, 88, 92, 99, 120, 125, 125, 130]
+                    }]
+                });
+            } else {
+                myChart.setOption({
+                    xAxis: {
+                        data: ["周一","周二","周三","周四","周五","周六","周日"]
+                    },
+                    series: [{
+                        // 根据名字对应到相应的系列
+                        data: [80, 15, 66, 40, 50, 55, 90]
+                    }]
+                });
+            }
+        }else{
+            return
+        }
+    });
+
+    //页面初始数据
+     $(function(){
+         myChart.setOption({
+             xAxis: {
+                 data: ["1","2","3","6","9","12","15","18","21","24","27","30","31"]
+             },
+             series: [{
+                 // 根据名字对应到相应的系列
+                 data: [70, 70, 75, 78, 80, 85, 88, 92, 99, 120, 125, 125, 130]
+             }]
+         });
+     })
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

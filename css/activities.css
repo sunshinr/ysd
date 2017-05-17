@@ -1,0 +1,52 @@
+.activities{
+	display: flex;
+
+	flex-direction: column;
+}
+.activities li{
+	width: 100%;
+	height: 12.5rem;
+	margin-top:2rem;	
+}
+.active_img{
+	position: relative;
+	width: 100%;
+	height: 10rem;
+}
+.active_img div{
+	position: absolute;
+	width: 18rem;
+	height: 5rem;
+	background: rgba(255, 255, 255, 0.66);
+	left: 50%;
+	top: 50%;
+	margin-top: -2.5rem;
+	margin-left: -9rem;
+	text-align: center;
+	color: #406c80;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.active_img div p:nth-of-type(1){
+	font-size: 1.5rem;
+}
+.active_img div p:nth-of-type(2){
+	font-size: 1.2rem;
+}
+
+.active_img img{
+	width: 100%;
+}
+.active_num{
+	color: #999999;
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2rem;
+	align-items: center;
+	height: 2.5rem;
+}
+.active_num i{
+	margin: 0 1rem;
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>医患沟通</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" >
+    <link rel="stylesheet" type="text/css" href="/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/message.css" >
+    <script type="text/javascript" src="/js/jquery.min.js" ></script>
+    <script type="text/javascript" src="/js/zepto.min.js" ></script>
+    <script type="text/javascript" src="/js/zepto.sqq.js" ></script>
+</head>
+<body>
+
+<!--占位头部（可删）-->
+		<header>
+			<a href='doctor-detail-shadow.html'><i><img src="/images/left-ico.png"/></i></a>
+			<h1>蒋傇洋</h1>
+			<a href='doctor-appraise.html'><i class="Back">评价</i></a>
+		</header>
+<!--容器-->
+<div class="message">
+    <ul class="message_ul">
+        <!--对方消息-->
+        <li class="Other">
+            <a href="##"><img class="Head_img" src="/images/message_03.png" alt=""></a>
+            <div class="message_con">
+                <p>您好！请问有什么可以帮你的吗？</p>
+            </div>
+        </li>
+
+        <li class="Other">
+            <a href="##"><img class="Head_img" src="/images/message_03.png" alt=""></a>
+            <div class="message_con">
+                <p><img src="/images/active-detail_08.jpg" alt=""></p>
+            </div>
+        </li>
+
+        <span class="message_time">11:20</span>
+        <!--自己消息-->
+        <li class="My">
+            <a href="##"><img class="Head_img" src="/images/message_11.png" alt=""></a>
+            <div class="message_con">
+                <p>您好，请问如何装逼能得满分</p>
+            </div>
+        </li>
+
+
+        <li class="My">
+            <a href="##"><img class="Head_img" src="/images/message_11.png" alt=""></a>
+            <div class="message_con">
+                <p><img src="/images/active-detail_08.jpg" alt=""></p>
+            </div>
+        </li>
+
+
+
+
+    </ul>
+    <!--内容输入框-->
+    <div class="bottom">
+
+        <!--输入框-->
+        <div class="Input_box">
+            <div class="Input_div">
+                <div contenteditable="true" class="text"></div>
+                <span class="updateImgBtn"><img src="/images/message_19.png" alt=""></span>
+            </div>
+            <button id="Send"  disabled="disabled">发送</button>
+        </div>
+        <!--扩展文件-->
+        <div class='extend' style='display: none'><ul>
+            <li class='upimages'><label for='file' id='upImg'> <img src='/images/message-pic_03.png' alt=''></label><input type="file" id="file" /><p>病例</p> </li></div>
+        </ul></div>
+    </div>
+
+
+<div id="mask">
+
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="/js/upimg.js"></script>
+<script>
+    var InputDom = "<li class='My' style='display:none'><a href='##'><img class='Head_img' src='/images/message_11.png' alt=''></a><div class='message_con'><p>"
+        InputDom2 = "</p></div></li>";
+      // UploadImg = "";
+
+    //显示遮罩
+    function alertBox(){
+        $("#mask").fadeIn(200);
+    }
+    //隐藏遮罩
+    function clearBox(){
+        $("#mask").fadeOut(100);
+    }
+
+
+    //图片预览
+    function tu(obj){
+        alertBox();
+        var MaskImgSrc = $(obj).attr('src');
+        $("#mask").append("<img src='"+ MaskImgSrc +"' onclick='clearMaskImg()'>");
+
+        var MaskImgH = $("#mask img").height();   //弹框居中
+        var MaskImgW = $("#mask img").width();
+        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
+
+        $("#mask img").css({
+            'top': (windowHeight - MaskImgH) /2,
+            'left': (windowWidth - MaskImgW) /2,
+        })
+    };
+
+
+
+    //遮罩层预览大图关闭
+   function clearMaskImg(){
+        $('#mask').html('');
+       clearBox();
+    };
+
+
+
+
+    $('.message_con p img').click(function (){
+        tu(this);
+    });
+
+    $(function(){
+        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
+
+
+        // 发送按钮事件
+        $('#Send').on('click',function(){
+            var inputText = $('.text').text();
+            $('.message_ul').append(InputDom + inputText +InputDom2);
+            $('.My').fadeIn(100);
+            $('.text').text('');
+            Switch();
+            $('#Send').attr('disabled','disabled').css('color','#ccc');
+            windowHeight = $('.message_ul').height();
+            $('body').animate({
+                scrollTop: windowHeight
+            },600);
+        });
+
+
+
+
+
+
+
+        //   图片添加预览/发送
+        z.plimg(z.$('file'),z.$('img'),function(file,img,url){
+             var imgDom = "<img src='"+ url +"' alt='' onclick='tu(this)'>";
+            $('.message_ul').append(InputDom + imgDom + InputDom2 );
+            $('.My').fadeIn(100);
+            windowHeight = $('.message_ul').height();
+            $('body').animate({
+                scrollTop: windowHeight
+            },900);
+            Switch();
+        });
+
+
+
+        $('.text').keyup(function sw(){
+            Switch();
+            $('.extend').slideUp(200);
+            if($(this).text().length =='0' || $(this).text().match(/^\s+$/g)){
+                $('#Send').attr('disabled','disabled').css('color','#ccc');
+            } else {
+                $('#Send').removeAttr('disabled').css('color','#03a9f4');
+            };
+
+        });
+
+       //底部扩展层开关
+        function Switch(){
+           $('.extend').slideUp(200);
+            return n=0;
+        }
+
+        var n = 0;
+        $(".updateImgBtn").on('click',function(){
+            if(n == 0){
+               $('.extend').slideDown(200);
+                return n=1;
+            } else {
+                $('.extend').slideUp(200);
+                return n=0;
+            }
+
+        });
+
+
+
+//          //评论dom
+//          var CommenCon = "<div class='comment_con'><div class='warring'>您确定去评价并且结束本次交流！</div>
+//          <div class='comment_btn'><a href='doctor-appraise.html'>结束并评价</a> 算了</a></div> </div>";
+//
+//
+//
+//          //返回按钮
+//          $(".Back").on('click',function(){
+//              alertBox();
+//              $("#mask").append(CommenCon);   //添加弹框
+//              var ComH = $(".comment_con").height();   //弹框居中
+//              var ComW = $(".comment_con").width();
+//
+//
+//              $(".comment_con").css({
+//                  'top': (windowHeight - ComH) /2,
+//                  'left': (windowWidth - ComW) /2,
+//              })
+//          });
+//
+//
+
+
+
+
+    })
+
+
+</script>
+
+</body>
+</html>

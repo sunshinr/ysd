@@ -1,0 +1,154 @@
+body {
+  background: #f6f6f6;
+}
+body .community {
+  width: 100%;
+  height: auto;
+}
+body .community .top-box {
+  background: #ffffff;
+  display: -webkit-flex;
+  display: flex;
+}
+body .community .top-box .box-child {
+  flex: 1;
+  text-align: center;
+  margin: 0.7rem 0;
+  border-right: solid 1px rgba(155, 155, 155, 0.1);
+}
+body .community .top-box .box-child i {
+  display: inline-block;
+}
+body .community .top-box .box-child span {
+  display: block;
+  color: #4f4f4f;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+body .community .top-box .box-child:first-of-type i {
+  width: 1.7rem;
+  height: 2rem;
+  background: url("../images/tu_03.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+body .community .top-box .box-child:nth-of-type(2) i {
+  width: 1.9rem;
+  height: 2rem;
+  background: url("../images/tu_05.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+body .community .top-box .box-child:last-of-type {
+  border: none;
+}
+body .community .top-box .box-child:last-of-type i {
+  width: 1.8rem;
+  height: 2rem;
+  background: url("../images/tu_07.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+body .community .box-list {
+  padding: 0 0.8rem;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 1.3rem;
+}
+body .community .box-list li {
+  flex: 1;
+  color: #4f4f4f;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 1.2rem;
+  background: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 0.6rem;
+}
+body .community .box-list li:last-child {
+  margin: 0;
+}
+body .community .community-box {
+  padding: 0 0.8rem;
+}
+body .community .community-box li {
+  margin-top: 1.3rem;
+  background: #ffffff;
+  width: 100%;
+  height: auto;
+  padding: 1.5rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+body .community .community-box li i {
+  display: inline-block;
+  width: 10%;
+}
+body .community .community-box li i img {
+  width: 100%;
+}
+body .community .community-box li .community-list {
+  width: 85%;
+  float: right;
+}
+body .community .community-box li .community-list .name {
+  font-size: 1.3rem;
+  color: #4f4f4f;
+}
+body .community .community-box li .community-list .name .time {
+  margin-left: 1rem;
+  float: none;
+}
+body .community .community-box li .community-list .name span {
+  color: rgba(40, 40, 40, 0.5);
+  font-size: 1rem;
+  float: right;
+  margin-top: 0.2rem;
+}
+body .community .community-box li .community-list .list-content {
+  color: rgba(40, 40, 40, 0.8);
+  width: 98%;
+  margin-left: 0.3rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+body .community .community-box li .community-list .list-bg {
+  margin-top: 1rem;
+  width: 100%;
+}
+body .community .community-box li .community-list .list-bg img {
+  width: 100%;
+}
+body .community .community-box li .community-list .list-side {
+  width: 65%;
+  margin-top: 1rem;
+  float: right;
+}
+body .community .community-box li .community-list .list-side span {
+  color: rgba(40, 40, 40, 0.5);
+  font-size: 1rem;
+  margin-left: 1.3rem;
+  vertical-align: top;
+}
+body .community .community-box li .community-list .list-side span i {
+  display: inline-block;
+}
+body .community .community-box li .community-list .list-side span:first-child i {
+  width: 1.4rem;
+  height: 0.9rem;
+  background: url("../images/tu_13.png") 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+body .community .community-box li .community-list .list-side span:nth-child(2) i {
+  width: 1.2rem;
+  height: 1rem;
+  background: url("../images/tu_19.png") 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+body .community .community-box li .community-list .list-side span:last-child i {
+  width: 1.1rem;
+  height: 1.1rem;
+  background: url("../images/tu_21.png") 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}

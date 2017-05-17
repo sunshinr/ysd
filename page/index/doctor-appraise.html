@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>评价</title>
+    <link rel="stylesheet" href="/css/reset.css" media="screen">
+    <link rel="stylesheet" href="/css/common.css" media="screen">
+    <link rel="stylesheet" href="/css/doctor-appraise.css" media="screen">
+	
+	<script src="/js/zepto.min.js"></script>
+	<script src="/js/zepto.sqq.js"></script>
+</head>
+<body>
+		<header>
+			<a href="javascript:history.go(-1)"><i><img src="/images/left-ico.png"/></i></a>
+			<h1>评价</h1>
+		</header>	
+<div class="appraise">
+    <div class="appraise-box clear">
+        <div class="d-detail">
+            <span>副教授</span>
+            <i><img src="/images/d-tu_03.jpg"></i>
+            <span>性别：女</span>
+        </div>
+        <h4>蒋傇洋</h4>
+        <p>心血管疾病</p>
+    </div>
+    <div class="star-appraise">
+        <span id="star" data-number="5"></span>
+        <div class="pingjia clear" id="appraise">
+            <span id="pingjia"></span>星评价
+        </div>
+    </div>
+    <div class="pj-content">
+        <textarea class="height-auto" placeholder="请输入相关评价信息！" onkeyup="checkLength(this);"></textarea>
+        <span>500字以内</span>
+    </div>
+    <a href="doctor-detail-shadow.html"><div class="pj-btn">提交评价</div></a>
+</div>
+
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.raty.min.js"></script>
+<script>
+    $(function(){
+        //星级评价
+        $.fn.raty.defaults.path = '/images';
+        $('#star').raty({
+            number: function() {
+                return $(this).attr('data-number');
+            }
+        });
+
+        $("#star").on('click',function(){
+            $("#appraise").show();
+            var a=$("input[name='score']").val();
+            //console.log(a);
+            $("#pingjia").text(a);
+        });
+
+        //输入框自适应
+        function setHeight(element) {
+            $(element).css({'overflow-y': 'hidden', 'height': '2rem'}).height(element.scrollHeight);
+        }
+        $('.height-auto').each(function () {
+            setHeight(this);
+        }).on('input', function () {
+            setHeight(this);
+        });
+
+    });
+    
+    function checkLength(which){
+        var maxChars = 500; //
+        if (which.value.length > maxChars)
+        {
+            alert("您出入的字数超出限制!");
+            // 超过限制的字数了就将 文本框中的内容按规定的字数 截取
+            which.value = which.value.substring(0,maxChars);
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

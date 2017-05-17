@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>全面检测</title>
+		<link rel="stylesheet" href="/css/reset.css" media="screen">
+		<link rel="stylesheet" href="/css/common.css" media="screen">
+		<link rel="stylesheet" href="/css/detection-answer.css" media="screen">
+		<script src="/js/zepto.min.js"></script>
+		<script src="/js/zepto.sqq.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<a href="javascript:history.go(-1)"><i><img src="/images/left-ico.png"/></i></a>
+			<h1>全面检测</h1>
+		</header>
+		<div class="answer-container">
+
+			<h3 class="answer-tips">
+        共 <span class="tips-number"></span>题 &nbsp; <span class="tip">1</span>/
+        <span class="tips-number">12</span>
+    </h3>
+			<p class="list-title">
+				<span class="tip">1</span>.<span class="tip-title">每天休息几小时</span>
+			</p>
+			<ul class="content-list" id="content-ul">
+			</ul>
+
+		</div>
+		<div class="btn">
+			<button type="button" class="next">下一题</button>
+		</div>
+
+		<script src="/js/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+
+				var tipNum = 1,
+					arrNum = 0,
+					getData = [],
+					optArr = [],
+					rightArr = [],
+					rightsArr = [];
+
+				ajaxFn();
+
+				function ajaxFn() {
+
+					$(".tip").text(tipNum);
+
+					$.ajax({
+						url: "/js/tipsdata.json",
+						type: 'get',
+						dataType: 'json',
+						success: successFn,
+						error: function(err, status) {
+							console.log(err)
+						}
+					})
+				}
+
+				function successFn(data) {
+					$(".content-list li").remove();
+
+					getData = data;
+
+					optArr.push(getData[arrNum].opt);
+
+					for(var i = 0; i < 4;) {
+						var opt = "";
+						opt += '<li>' +
+							'<label>' + optArr[arrNum][i] + '</label>' +
+							'<input type="radio" name="answer">' +
+							'<i></i>' +
+							'</li>';
+						i++;
+						$(".content-list").append(opt);
+					}
+
+					$(".tip-title").text(getData[arrNum].tit);
+
+					$(".tips-number").text(getData.length);
+
+					$('#content-ul li').on("click", function() {
+						rightArr = [];
+						$('#content-ul li').find("input").removeAttr('checked');
+						$('#content-ul li').removeClass('active');
+
+						$(this).find("input").attr('checked', true);
+						$(this).addClass('active');
+
+						rightArr.push($(this).index())
+
+					})
+
+				}
+
+				$(".next").on("click", function() {
+					if($(this).text() === "下一题") {
+						if(rightArr.length !== 0) {
+							if(tipNum === getData.length) {
+								rightsArr.push(parseInt(rightArr));
+								$(this).text("提交")
+							}
+
+							if(getData.length > tipNum) {
+								tipNum++;
+								arrNum++;
+								$(".tip").text(tipNum);
+
+								ajaxFn();
+								rightsArr.push(parseInt(rightArr));
+
+								rightArr = [];
+
+							}
+							console.log(rightsArr); //----------------------------------------选择答案数组;
+
+						} else {
+							alert("请选择")
+						}
+					} else if($(this).text() === "提交") {
+						window.location.href="present-state.html"
+					}
+
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

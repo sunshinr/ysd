@@ -1,0 +1,91 @@
+body {
+  background: #f6f6f6;
+}
+.bg-write {
+  background: #ffffff;
+}
+.input-style {
+  width: 100%;
+  margin: 1.3rem 0;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  color: #959595;
+}
+.form-style {
+  background: #ffffff;
+  margin-top: 0.7rem;
+  padding: 1rem 0.5rem;
+}
+.title-style {
+  margin: 0.7rem 0;
+  padding: 1rem 1rem 1rem 1.5rem;
+  color: #585858;
+  font-size: 1.4rem;
+}
+.fill-order-wrap .fill-order-title {
+  background: #ffffff;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #363838;
+  padding: 1.5rem;
+}
+.fill-order-wrap .consignee-info h3 {
+  background: #ffffff;
+  margin: 0.7rem 0;
+  padding: 1rem 1rem 1rem 1.5rem;
+  color: #585858;
+  font-size: 1.4rem;
+}
+.fill-order-wrap .consignee-info h3 i {
+  float: right;
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: url("../images/fill-icon.png");
+  background-size: 100%;
+  position: relative;
+  top: 0.2rem;
+}
+.fill-order-wrap .consignee-info h3 .active {
+  background: url("../images/fill-icon-active.png");
+  background-size: 100%;
+}
+.fill-order-wrap .consignee-info h3 span {
+  padding: 0.2rem;
+  float: right;
+  font-size: 1rem;
+  color: #d83d11;
+}
+.fill-order-wrap .consignee-info form {
+  background: #ffffff;
+  margin-top: 0.7rem;
+  padding: 1rem 0.5rem;
+}
+.fill-order-wrap .consignee-info form input {
+  width: 100%;
+  margin: 1.3rem 0;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  color: #959595;
+}
+.fill-order-wrap .consignee-add h3 {
+  margin: 0.7rem 0;
+  padding: 1rem 1rem 1rem 1.5rem;
+  color: #585858;
+  font-size: 1.4rem;
+}
+.fill-order-wrap .consignee-add form {
+  background: #ffffff;
+  margin-top: 0.7rem;
+  padding: 1rem 0.5rem;
+}
+.fill-order-wrap .consignee-add form input {
+  width: 100%;
+  margin: 1.3rem 0;
+  border-bottom: 1px solid #cccccc;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  color: #959595;
+}

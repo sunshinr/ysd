@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>医生详情-弹窗</title>
+		<link rel="stylesheet" href="/css/reset.css" media="screen">
+		<link rel="stylesheet" href="/css/common.css" media="screen">
+		<link rel="stylesheet" href="/css/doctor-detail-shadow.css" media="screen">
+		<script src="/js/zepto.min.js"></script>
+		<script src="/js/zepto.sqq.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<a href="javascript:history.go(-1)"><i><img src="/images/left-back_03.png"/></i></a>
+			<h1>医生详情</h1>
+		</header>
+		<div class="doctor">
+			<div class="doctor-box">
+				<div class="content-top clear">
+					<div class="top-left">
+						<i><img src="/images/doctor-d_03.jpg"></i>
+						<span>副教授</span>
+					</div>
+					<div class="top-right">
+						<h4>蒋傇洋<span>女</span></h4>
+						<p><i></i>心血管疾病</p>
+						<p><i></i>上海市人民医院</p>
+						<div class="top-btn">
+							<span>+关注</span>
+							<span id="exchange">医患交流</span>
+						</div>
+						<div class="integral">聊天消耗积分：<span>15分</span></div>
+					</div>
+				</div>
+				<h3 class="doctor-tit">医生简介</h3>
+				<div class="doctor-content">
+					<p>1959年5月出生，甘肃省兰州市人，1983年毕业于北京医科大学，同年8月参加工作，参加工作二十三年来一直在西安交通大学医学院第一附属医院（原西安医科大学第一附属医院）从事临床医疗、教学、科研工作。</p>
+					<p>蒋傇洋同志作为改革开放后的第一批大学生，于1978年以优异的成绩考入北京医科大学，毕业后本来可以留北京工作，但他响应祖国的号召，支援大西北，到古城西安工作。</p>
+				</div>
+			</div>
+			<div id="ceng"></div>
+			<div class="show" id="show">
+				<p>聊天将消耗15积分</p>
+				<span id="cancel">取消</span>
+				<span id="confirm">确定</span>
+			</div>
+		</div>
+
+		<script>
+			$(function() {
+				$('#exchange').on('click', function() {
+					$('#show').show();
+					$('#ceng').show();
+				});
+				$('#cancel').on('click', function() {
+					$('#show').hide();
+					$('#ceng').hide();
+				});
+				$("#confirm").on('click',function(){
+					window.location.href="message.html"
+				});
+			});
+		</script>
+	</body>
+
+</html>

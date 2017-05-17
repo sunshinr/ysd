@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>预防宝典</title>
+		<link rel="stylesheet" href="css/reset.css" media="screen">
+		<link rel="stylesheet" href="css/common.css" media="screen">
+		<link rel="stylesheet" href="css/community.css" media="screen">
+		<script src="js/mui.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<i><a href="javascript:history.go(-1)"><img src="images/left-ico.png"/></a></i>
+			<h1>预防宝典</h1>
+			<i><img src="images/health_2.png"/></i>
+		</header>
+
+		<div class="mui-slider" id="slider">
+			<div class="mui-slider-group mui-slider-loop">
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="images/shop-slide_02.jpg" /></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/shop-slide_02.jpg" /></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/shop-slide_02.jpg" /></a>
+				</div>
+				<div class="mui-slider-item">
+					<a href="#"><img src="images/shop-slide_02.jpg" /></a>
+				</div>
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#"><img src="images/shop-slide_02.jpg" /></a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+
+		<div class="community take_top">
+			<ul class="box-list">
+				<li>传染病</li>
+				<li>环境卫生</li>
+				<li>食品卫生</li>
+				<li>公共卫生</li>
+			</ul>
+			<ul class="community-box">
+				<li>
+					<i><img src="images/tu_16.png"></i>
+					<div class="community-list">
+						<div class="name">罗小黑
+							<span class="time">6小时前</span>
+							<span>来自：公共卫生</span>
+						</div>
+						<p class="list-content">我国南方部分省份遭受较大规模的低温雨雪冰冻灾害，部分地区电力系统遭到破坏，交通运输受到严重影响，加之又值春运时期</p>
+						<div class="list-side">
+							<span><i></i>10254</span>
+							<span><i></i>58</span>
+							<span><i></i>103</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<i><img src="images/tu_16.png"></i>
+					<div class="community-list">
+						<div class="name">张医生
+							<span class="time">8小时前</span>
+							<span>来自：传染病</span>
+						</div>
+						<p class="list-content">自2016年10月以来，中国报告的人感染H7N9禽流感病例数出现上升[1]。本报告对A（H7N9）病毒的近期科学发现进行了综述。</p>
+						<div class="list-bg">
+							<img src="images/list-bg_03.jpg">
+						</div>
+						<div class="list-side">
+							<span><i></i>10254</span>
+							<span><i></i>58</span>
+							<span><i></i>103</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/zepto.sqq.js"></script>
+		<script>
+			var gallery = mui('#slider');
+			gallery.slider({
+				interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,76 @@
+.shopcart {
+  background: #f5f5f5;
+  margin-bottom: 5rem;
+}
+.shopcart .title {
+  font-size: 1.7rem;
+  text-align: center;
+  width: 100%;
+  padding: 1.3rem 0;
+  background: #FFFFFF;
+}
+.shopcart .banner {
+  background: #FFFFFF;
+  padding: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #999999;
+  text-align: center;
+}
+.shopcart .active-title {
+  font-size: 1.3rem;
+  color: #808080;
+  background: #FFFFFF;
+  padding: 1.5rem 1rem 1rem 1rem;
+  margin-top: 0.4rem;
+}
+.shopcart .active-ul {
+  margin-top: 0.5rem;
+  background: #FFFFFF;
+}
+.shopcart .active-ul li {
+  padding: 1.4rem 1rem 1rem 1rem;
+  overflow: hidden;
+  border-bottom: solid 1px #e0e0e0;
+}
+.shopcart .active-ul li .list-img {
+  width: 20%;
+  float: left;
+}
+.shopcart .active-ul li .list-img img {
+  width: 100%;
+}
+.shopcart .active-ul li .list-right {
+  float: right;
+  width: 75%;
+}
+.shopcart .active-ul li .list-right h4 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+.shopcart .active-ul li .list-right .right-item {
+  margin-top: 1.8rem;
+}
+.shopcart .active-ul li .list-right .right-item .item-l {
+  font-size: 1.2rem;
+  color: #626161;
+}
+.shopcart .active-ul li .list-right .right-item .item-l i {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: url("../images/active-icon.png") 0 0 no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  margin-right: 0.3rem;
+}
+.shopcart .active-ul li .list-right .right-item .item-r {
+  margin-left: 2rem;
+  font-size: 1rem;
+  color: #b2b2b2;
+}
+.shopcart .active-ul li .list-right .right-item .item-r a {
+  color: #626161;
+  margin-left: 0.2rem;
+}

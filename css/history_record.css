@@ -1,0 +1,101 @@
+body {
+  background: #f6f6f6;
+}
+.bg-write {
+  background: #ffffff;
+}
+.history-header {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem 0 1rem;
+  border-bottom: 1px solid #e0dfde;
+}
+.history-header a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.history-header a:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 3rem;
+  background: url("../images/inquiry-iocn_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+.history-header a:nth-child(3) {
+  position: absolute;
+  right: 1.4rem;
+  top: 3rem;
+  background: url("../images/history-icon_03.png") no-repeat;
+  background-size: 100% 100%;
+}
+.history-header p {
+  width: 100%;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 1.7rem;
+}
+.month-step {
+  padding: 3rem 0;
+  background: #ffffff;
+  color: #4e9bea;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+.month-step span {
+  font-size: 6.4rem;
+  display: inline-block;
+  transform: rotateY(-40deg);
+  margin: 0 -0.5rem 0 0.6rem;
+}
+.day-step-wrap {
+  background: #ffffff;
+  text-align: center;
+}
+.day-step-wrap i {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-bottom: 0.8rem solid #59a1eb;
+  margin-bottom: -0.3rem;
+}
+.day-step-wrap .day-step:nth-child(even) {
+  font-size: 10rem;
+  background: -webkit-linear-gradient(left, #61a6ec, #59a1eb);
+  /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to right, #61a6ec, #59a1eb);
+  /* 标准的语法 */
+}
+.day-step-wrap .day-step:nth-child(odd) {
+  background: -webkit-linear-gradient(left, #4e9bea, #6babed);
+  /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to right, #4e9bea, #6babed);
+  /* 标准的语法 */
+}
+.day-step-wrap .day-step:nth-child(2) p {
+  transform: rotateY(0deg) !important;
+}
+.day-step {
+  color: #ffffff;
+  padding: 2rem 0 1.8rem;
+}
+.day-step p {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 2.3rem 0 0 2rem;
+  transform: rotateY(-40deg);
+}
+.day-step dl {
+  text-align: center;
+}
+.day-step dl dt {
+  transform: rotateY(-40deg);
+  font-size: 3.5rem;
+}
+.day-step dl dd {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}

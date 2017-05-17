@@ -1,0 +1,137 @@
+body {
+  background: #f6f6f6;
+}
+.bg-white {
+  background: #ffffff;
+}
+.sign {
+  float: right;
+  background: #03a9f4;
+  color: #ffffff;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
+  padding: 0.3em 1.2rem;
+  font-size: 1.1rem;
+}
+.w {
+  width: 94%;
+  margin: 0 3%;
+}
+.details-header {
+  position: relative;
+  background: #ffffff;
+  padding: 3rem 0 1rem;
+  border-bottom: 1px solid #e0dfde;
+}
+.details-header a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.details-header a:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 3rem;
+  background: url("../images/inquiry-iocn_back.png") no-repeat;
+  background-size: 100% 100%;
+}
+.details-header p {
+  width: 100%;
+  text-align: center;
+  color: #4f4f4f;
+  font-size: 1.7rem;
+}
+.details-title {
+  width: 94%;
+  margin: 0 3%;
+  padding: 1.5rem 0.5rem;
+  font-size: 1.6rem;
+  color: #4f4f4f;
+}
+.details-title span {
+  float: right;
+  background: #03a9f4;
+  color: #ffffff;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
+  padding: 0.3em 1.2rem;
+  font-size: 1.1rem;
+}
+.details-main {
+  width: 94%;
+  margin: 0 3%;
+  background: #ffffff;
+  padding: 2rem 1.5rem;
+  font-size: 1.3rem;
+  color: #464646;
+}
+.details-main span {
+  float: right;
+  background: #03a9f4;
+  color: #ffffff;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
+  padding: 0.3em 1.2rem;
+  font-size: 1.1rem;
+}
+.add-main {
+  background: #ffffff;
+  width: 94%;
+  margin: 0 3%;
+  padding: 1.5rem 1rem 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #f3f3f3;
+}
+.add-main p {
+  color: #464646;
+  padding: 0.8rem 0;
+}
+.add-main p:first-child {
+  font-weight: 500;
+}
+.add-main p:nth-child(2) {
+  font-size: 1.2rem;
+}
+.add-main i {
+  float: right;
+  display: inline-block;
+  width: 1.3rem;
+  height: 2rem;
+  margin-left: 0.4rem;
+  background: url("../images/right-icon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.add-main span {
+  float: right;
+  background: #03a9f4;
+  color: #ffffff;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
+  padding: 0.3em 1.2rem;
+  font-size: 1.1rem;
+}
+button {
+  width: 94%;
+  margin: 5rem 0 1rem 3%;
+  padding: 1.3rem 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  background: #03a9f4;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}

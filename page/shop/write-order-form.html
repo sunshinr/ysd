@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>填写订单</title>
+		<link rel="stylesheet" href="/css/reset.css" media="screen">
+		<link rel="stylesheet" href="/css/common.css" media="screen">
+		<link rel="stylesheet" href="/css/write-order-form.css" media="screen">
+
+	</head>
+
+	<body>
+		<header>
+			<i><a href="javascript:history.go(-1)"><img src="/images/left-ico.png"/></a></i>
+			<h1>购物车</h1>
+		</header>
+		<div class="order-form">
+			<a href="address.html"><div class="address"><i></i>去选择地址<span></span></div></a>
+			<div class="order-detail">
+				<img src="/images/good_03.jpg">
+				<div class="order-text">
+					<h4>Kings Ginger</h4>
+					<p>￥<span id="price2">190.21</span></p>
+					<div class="num">
+						<i onclick="crease(-1)"></i>
+						<span id="num">1</span>
+						<i onclick="crease(1)"></i>
+					</div>
+				</div>
+			</div>
+			<div class="order-style">
+				支付方式<span><a id="way1"></a><i id="pay-order1"></i></span>
+				<div class="paying">在线支付</div>
+			</div>
+			<div class="order-style">
+				优惠码<span><a id="way2"></a><i id="pay-order2"></i></span>
+				<div class="promotion-code">
+					使用优惠码<input type="text" class="code-text">
+					<input type="button" value="确定" class="code-btn">
+				</div>
+			</div>
+			<ul class="order-list">
+				<li>商品金额<span id="price">￥190.21</span></li>
+				<li>运费<span id="carriage">￥0.00</span></li>
+				<li>优惠金额<span id="privilege">-￥10.00</span></li>
+			</ul>
+			<div class="integral">赠送180积分</div>
+		</div>
+		<div class="order-bottom">
+			<span class="order-money">实付款：￥<a id="total-num">180.21</a></span>
+			<a href=""><span class="order-pay">提交订单</span></a>
+		</div>
+
+		<script src="/js/zepto.min.js"></script>
+		<script src="/js/zepto.sqq.js"></script>
+		<script>
+			var num = $('#num').text();
+			var price = parseFloat($('#price').text().substring(1));
+			var carriage = parseFloat($('#carriage').text().substring(1));
+			var privilege = parseFloat($('#privilege').text().substring(2));
+			var TotalNum1;
+			var TotalNum2;
+
+			$('#pay-order1').click(function() {
+				$('.paying').css('display', 'block');
+				$(this).addClass('active');
+			});
+			$('.paying').click(function() {
+				$('#way1').text($(this).text());
+				$('.paying').css('display', 'none');
+				$('#pay-order1').removeClass('active');
+			});
+
+			$('#pay-order2').click(function() {
+				$('.promotion-code').css('display', 'block');
+				$(this).addClass('active');
+			});
+			$('.code-btn').click(function() {
+				$('#way2').text($('.code-text').val());
+				$('.promotion-code').css('display', 'none');
+				$('#pay-order2').removeClass('active');
+				$('.code-text').val('');
+			});
+
+			function crease(index) {
+				if(index > 0) {
+					num++;
+				} else {
+					if(num > 1) {
+						num--;
+					}
+				}
+				$('#num').text(num);
+				console.log(num);
+				TotalNum1 = (price * num + carriage - privilege).toFixed(2);
+				TotalNum2 = (price * num).toFixed(2);
+				$('#total-num').text(TotalNum1);
+				$('#price2').text(TotalNum2);
+			}
+		</script>
+	</body>
+
+</html>

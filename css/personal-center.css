@@ -1,0 +1,146 @@
+body {
+  background: #f6f6f6;
+}
+.personal-wrap{
+	margin-top: -4.5rem;
+}
+.personal-wrap .herder-wrap {
+  padding: 1rem 0 2rem;
+  background: -webkit-linear-gradient(left top, #49c8f3, #118ce2);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom right, #49c8f3, #118ce2);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom right, #49c8f3, #118ce2);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom right, #49c8f3, #118ce2);
+  /* 标准的语法（必须放在最后） */
+}
+.personal-wrap .personal-header-tittle {
+  position: relative;
+}
+.personal-wrap .personal-header-tittle i {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+.personal-wrap .personal-header-tittle i:first-child {
+  position: absolute;
+  left: 1.4rem;
+  top: 0;
+  background: url("../images/icon_1.png") no-repeat;
+  background-size: 100% 100%;
+}
+.personal-wrap .personal-header-tittle i:nth-child(3) {
+  position: absolute;
+  right: 1.4rem;
+  top: 0;
+  background: url("../images/icon_2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.personal-wrap .personal-header-tittle p {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+.personal-wrap .personal-header-photo {
+  padding: 2rem;
+  padding-bottom: 0 !important;
+}
+.personal-wrap .personal-header-photo i {
+  display: inline-block;
+  float: left;
+  width: 6.8rem;
+  height: 6.8rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.personal-wrap .personal-header-photo i img {
+  width: 100%;
+}
+.personal-wrap .personal-header-photo span {
+  display: inline-block;
+  float: left;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 2.5rem 0 0 2rem;
+}
+.personal-wrap .personal-number {
+  background: -webkit-linear-gradient(left top, #51c3f2, #349de6);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom right, #51c3f2, #349de6);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom right, #51c3f2, #349de6);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom right, #51c3f2, #349de6);
+  /* 标准的语法（必须放在最后） */
+  width: 100%;
+  display: flex;
+}
+.personal-wrap .personal-number li {
+  width: 100%;
+  float: left;
+  padding: 1.2rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+.personal-wrap .personal-number li p {
+  font-weight: 300!important;
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+}
+.personal-wrap .personal-main li {
+  background: #ffffff;
+  padding: 2rem;
+  border-bottom: 1px solid #f2f2f2;
+  color: #000000;
+  font-size: 1.5rem;
+}
+.personal-wrap .personal-main li a > i {
+  position: relative;
+  top: 0.4rem;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.5rem;
+}
+.personal-wrap .personal-main li a span {
+  position: relative;
+  top: 0.5rem;
+  font-size: 1.3rem;
+  color: #a6a6a6;
+  float: right;
+}
+.personal-wrap .personal-main li a span i {
+  position: relative;
+  margin-left: 0.6rem;
+  top: 0.2rem;
+  display: inline-block;
+  width: 1rem;
+  height: 1.5rem;
+  background: url("../images/icon_7.png") no-repeat;
+  background-size: 100% 100%;
+}
+.personal-wrap .personal-main li:first-child a > i {
+  background: url("../images/icon_3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.personal-wrap .personal-main li:nth-child(2) a > i {
+  background: url("../images/icon_4.png") no-repeat;
+  background-size: 100% 100%;
+}
+.personal-wrap .personal-main li:nth-child(3) a > i {
+  background: url("../images/icon_5.png") no-repeat;
+  background-size: 100% 100%;
+}
+.personal-wrap .personal-main li:nth-child(4) {
+  border: none !important;
+}
+.personal-wrap .personal-main li:nth-child(4) a > i {
+  background: url("../images/icon_6.png") no-repeat;
+  background-size: 100% 100%;
+}

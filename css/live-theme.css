@@ -1,0 +1,76 @@
+.theme {
+  background: #f5f5f5;
+}
+.theme .title {
+  font-size: 1.7rem;
+  text-align: center;
+  width: 100%;
+  padding: 1.3rem 0;
+  background: #FFFFFF;
+}
+.theme .theme-box {
+  width: 100%;
+  margin-top: 1rem;
+}
+.theme .theme-box .video-title {
+  padding: 0.7rem 1rem;
+  font-size: 1.4rem;
+  background: #FFFFFF;
+}
+.theme .theme-box .video {
+  padding: 0.8rem 1rem;
+  margin-top: 0.3rem;
+  background: #FFFFFF;
+}
+.theme .theme-box .video video {
+  width: 100%;
+}
+.theme .theme-box p {
+  font-size: 1.2rem;
+  color: #6a6a6a;
+  line-height: 2rem;
+  padding: 1.2rem 1rem 1rem 1rem;
+  background: #FFFFFF;
+}
+.theme ul {
+  background: #FFFFFF;
+  margin-top: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+.theme ul li {
+  padding: 1.5rem 1rem 0 1rem;
+}
+.theme ul li .theme-list {
+  position: relative;
+}
+.theme ul li .theme-list .img {
+  width: 100%;
+}
+.theme ul li .theme-list .img img {
+  width: 100%;
+}
+.theme ul li .theme-list .text {
+  position: absolute;
+  width: 80%;
+  background: rgba(240, 240, 240, 0.5);
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem 1.3rem;
+  border-radius: 0.1rem;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.theme ul li .browse {
+  font-size: 1rem;
+  color: #838383;
+}
+.theme ul li .browse span {
+  float: right;
+}
